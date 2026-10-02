@@ -1,0 +1,3 @@
+event,n_matching_variables,median_before_abs_SMD,median_after_abs_SMD,p90_before_abs_SMD,p90_after_abs_SMD,max_before_abs_SMD,max_after_abs_SMD,number_abs_SMD_lt_0.10_before,number_abs_SMD_lt_0.10_after,categorical_summary
+Hiroshima,40,0.3092073288313909,0.06462764638140522,0.6387168281212628,0.12671017335762588,0.8894159951279974,0.18378162092322892,6,31,reported through exact block rules; no standalone frozen before/after category table for both events
+Kyushu,40,0.24992179386469426,0.05627680294182155,0.5059619387631246,0.16018167483866622,0.7290800237588547,0.4367267417313838,3,33,reported through exact block rules; no standalone frozen before/after category table for both events

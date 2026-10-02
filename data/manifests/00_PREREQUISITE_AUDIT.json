@@ -1,0 +1,94 @@
+{
+  "rebuild_decision": {
+    "FINAL_DECISION": "PASS_HC_BUG03_CONTROLLED_REBUILD_V1_1__PAIR_AND_LABEL_LAYER_READY_FOR_DATASET_INDEX_REGENERATION",
+    "changed_slots": 24,
+    "corrected_core": {
+      "corrected_core": 28072,
+      "current_core": 28102,
+      "removed_core": 30,
+      "upstream_eligible": 29084
+    },
+    "important_rule": "Do not delete or overwrite the old frozen hard-control assets. Keep old and repaired versions side-by-side for provenance.",
+    "new_replacement_controls": 23,
+    "new_version_directory": "${PROJECT_ROOT}\\data\\06_hard_control\\03_hc_bug03_controlled_rebuild_v1_1",
+    "next_step_if_pass": "Regenerate DATASET-01/02 fold/training indices by preserving the existing pair_set_id-to-fold assignment and replacing only the control unit_ids according to the repaired pair edges. Then rerun all leakage/count/dynamic-sequence audits before model training.",
+    "original_assets_overwritten": false,
+    "positive_semantics": "AJG1 == 1 AND GSI == 1",
+    "rebuild_QA": {
+      "HC_BUG_02D_decision": "PASS_SHORT_AUGMENTING_PATH_FOUND__READY_FOR_HC_BUG03_CONTROLLED_REBUILD",
+      "changed_control_slots": 24,
+      "controls_outside_corrected_core": 0,
+      "expected": {
+        "changed_control_slots": 24,
+        "hard_control_count": 10112,
+        "master_rows": 139364,
+        "pair_edges": 10112,
+        "pair_set_count": 5056,
+        "positive_count": 5075,
+        "unique_hard_controls": 10112
+      },
+      "graph_QA": {
+        "P0_edge_coverage": 1.0,
+        "controls_outside_corrected_core": 0,
+        "final_edges": 10112
+      },
+      "hard_control_count": 10112,
+      "master_rows": 139364,
+      "new_controls_entered": 23,
+      "old_controls_removed": 23,
+      "pair_edge_control_reuse_count": 0,
+      "pair_edges": 10112,
+      "pair_set_count": 5056,
+      "pair_sets_not_exactly_two_controls": 0,
+      "positive_count": 5075,
+      "positive_semantics_unchanged": true,
+      "removed_illegal_controls_still_used": 0,
+      "status": "PASS",
+      "unique_hard_controls": 10112
+    },
+    "removed_illegal_controls": 23
+  },
+  "rebuild_qa": {
+    "HC_BUG_02D_decision": "PASS_SHORT_AUGMENTING_PATH_FOUND__READY_FOR_HC_BUG03_CONTROLLED_REBUILD",
+    "changed_control_slots": 24,
+    "controls_outside_corrected_core": 0,
+    "expected": {
+      "changed_control_slots": 24,
+      "hard_control_count": 10112,
+      "master_rows": 139364,
+      "pair_edges": 10112,
+      "pair_set_count": 5056,
+      "positive_count": 5075,
+      "unique_hard_controls": 10112
+    },
+    "graph_QA": {
+      "P0_edge_coverage": 1.0,
+      "controls_outside_corrected_core": 0,
+      "final_edges": 10112
+    },
+    "hard_control_count": 10112,
+    "master_rows": 139364,
+    "new_controls_entered": 23,
+    "old_controls_removed": 23,
+    "pair_edge_control_reuse_count": 0,
+    "pair_edges": 10112,
+    "pair_set_count": 5056,
+    "pair_sets_not_exactly_two_controls": 0,
+    "positive_count": 5075,
+    "positive_semantics_unchanged": true,
+    "removed_illegal_controls_still_used": 0,
+    "status": "PASS",
+    "unique_hard_controls": 10112
+  },
+  "required_assets": {
+    "canonical_pair_fold": "${PROJECT_ROOT}\\data\\05_final_dataset_assembly\\01_spatial_split_protocol\\dataset_01_pair_set_fold_crosswalk.parquet",
+    "canonical_unit_fold": "${PROJECT_ROOT}\\data\\05_final_dataset_assembly\\01_spatial_split_protocol\\dataset_01_unit_fold_crosswalk.parquet",
+    "original_formal_label": "${PROJECT_ROOT}\\data\\06_hard_control\\02_formal_pair_assignment\\04_label_layer\\hard_control_02_full_grid_label_layer.parquet",
+    "original_pair_sets": "${PROJECT_ROOT}\\data\\06_hard_control\\02_formal_pair_assignment\\03_pair_tables\\hard_control_02_pair_sets.parquet",
+    "p0_edges": "${PROJECT_ROOT}\\data\\06_hard_control\\01c_matching_sensitivity_audit\\02_edges\\hard_control_01b_p0_parent20km_superset_edges.parquet",
+    "rain_dataset": "${PROJECT_ROOT}\\data\\04_dynamic_rainfall_features\\07_rain_04_final_audit_freeze\\07_frozen\\dynamic_rainfall_features_frozen.parquet_dataset",
+    "rebuild_root": "${PROJECT_ROOT}\\data\\06_hard_control\\03_hc_bug03_controlled_rebuild_v1_1",
+    "static_model_view": "${PROJECT_ROOT}\\data\\03_static_eogis_features\\90_third_layer_assembly\\04_static_02_assembly\\03_model_candidate_view\\static_third_layer_model_candidate_view.parquet"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "ARM_A_HIROSHIMA": [
+    4,
+    4
+  ],
+  "ARM_A_KYUSHU": [
+    4,
+    4
+  ],
+  "ARM_B_HIROSHIMA": null,
+  "ARM_B_KYUSHU": null,
+  "GATE129_DECISION": "PASS_COMMON_DEM_MODEL_INPUT_ROBUSTNESS_ARM_B_INCOMPLETE",
+  "arm_b_model_available": false
+}

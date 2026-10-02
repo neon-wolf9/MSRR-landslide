@@ -1,0 +1,35 @@
+{
+  "all_or_none": true,
+  "assignment_objective": "after positive selection, minimum total frozen composite distance",
+  "bootstrap_B": 10000,
+  "bootstrap_unit": "complete matched set",
+  "component_partition": "true connected components of each frozen block legal graph",
+  "control_capacity": 1,
+  "experiment": "128C_SCALABLE_EXACT_PRETRIGGER_REMATCHING",
+  "frozen_before_any_128C_model_result": true,
+  "gate": {
+    "PASS_INTERNAL_FULL_PRETRIGGER_ROBUSTNESS_EXTERNAL_MIXED": "H_WINS>=3 and H_CI>=3 and external strong condition fails",
+    "PASS_STRONG_FULL_PRETRIGGER_ROBUSTNESS": "H_WINS=4 and H_CI=4 and K_WINS>=3 and K_CI>=3",
+    "otherwise": "FULL_PRETRIGGER_EFFECT_WEAKENED"
+  },
+  "hiroshima_cutoff_jst": "2018-07-06T18:30:00+09:00",
+  "hiroshima_cutoff_utc": "2018-07-06T09:30:00Z",
+  "historical_tie_rule": "stable positive ID/degree/flow ordering; exact MILP only when deterministic upper-bound construction fails",
+  "interval_minutes": 30,
+  "kyushu_cutoff_jst": "2017-07-05T16:00:00+09:00",
+  "kyushu_cutoff_utc": "2017-07-05T07:00:00Z",
+  "matching_variables": 40,
+  "no_approximation": true,
+  "no_edge_deletion": true,
+  "no_greedy_fallback": true,
+  "post_result_rescue": false,
+  "primary_objective": "maximum number of positives receiving exactly two distinct nonreused controls",
+  "ratio": "1:2",
+  "window_steps": 70,
+  "xgb_candidates": [
+    "D4",
+    "D6",
+    "D8"
+  ],
+  "xgb_n_jobs": 1
+}

@@ -1,0 +1,57 @@
+{
+  "status": "FROZEN_BEFORE_128B1_TRAINING",
+  "implementation_status": "PAPER_INFORMED_BENCHMARK_ADAPTATION",
+  "implementation_choice": {
+    "stage1_rf_n_estimators": 300,
+    "rationale": "The paper fixes the RandomForest family but not this software parameter. The smaller value from the already frozen 128A3 ensemble-size range [300, 500] is fixed before any 128B1 run; it is not selected on outer-test results."
+  },
+  "fixed": {
+    "spy_fraction": 0.15,
+    "stage1_rf_max_depth": null,
+    "stage1_rf_min_samples_leaf": 1,
+    "stage1_rf_max_features": "sqrt",
+    "stage1_rf_class_weight": "balanced",
+    "sampling_strategy": "all",
+    "bootstrap": false
+  },
+  "validation_search_space": {
+    "threshold_rules": [
+      "spy_min",
+      "spy_q05",
+      "spy_q10"
+    ],
+    "n_estimators": [
+      300,
+      500
+    ],
+    "max_depth": [
+      12,
+      null
+    ],
+    "min_samples_leaf": [
+      1,
+      5,
+      20
+    ],
+    "max_features": [
+      "sqrt"
+    ],
+    "replacement": [
+      true,
+      false
+    ]
+  },
+  "selection": {
+    "data": "rotating validation fold only",
+    "score": "mean(AUROC,AUPRC,StrictPair,Edge)",
+    "tie_break": [
+      "StrictPair",
+      "Edge",
+      "AUPRC",
+      "AUROC",
+      "earlier config index"
+    ],
+    "outer_test_used": false
+  },
+  "smoke_parameters_used": false
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_131_PAIRDIFF_XGB_FAIRNESS_COMPLETE",
+  "formal_benchmark_used": true,
+  "benchmark_changed": false,
+  "folds_changed": false,
+  "pairdiff_representation_changed": false,
+  "pairdiff_feature_identity_pass": true,
+  "xgb_grid_source": "${PROJECT_ROOT}\\scripts\\120B_RUN_MSRR_CROSS_BACKBONE_5FOLD_NO_LIGHTGBM_ONE_SHOT.py",
+  "xgb_n_jobs": 1,
+  "kyushu_used_for_model_selection": false,
+  "bootstrap_B": 10000,
+  "bootstrap_unit": "complete matched set",
+  "new_models_trained": [
+    "PAIRDIFF_XGB"
+  ],
+  "post_result_rescue": false,
+  "extra_hyperparameter_search": false,
+  "outer_test_used_for_selection": false,
+  "matched_sets": 5056,
+  "selected_configs": {
+    "1": "D8",
+    "2": "D4",
+    "3": "D8",
+    "4": "D8",
+    "5": "D8"
+  },
+  "MSRR_wins_n": 4,
+  "positive_CI_n": 4,
+  "GATE131_DECISION": "PASS_STRONG_SAME_BACKBONE_REPRESENTATION_SUPPORT"
+}

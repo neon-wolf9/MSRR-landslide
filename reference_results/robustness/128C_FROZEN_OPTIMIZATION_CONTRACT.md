@@ -1,0 +1,5 @@
+# 128C frozen optimization contract
+
+The authority is Experiment 127 and its source code, not a newly invented formulation. Legal edges use the unchanged 40 variables, joint event-specific median/IQR transforms, group weights, composite distance, hard calipers, geology compatibility, exact missingness block, exact soil-completeness block, 20 km rule, and P0 candidate pool.
+
+For every legal edge e=(p,c), x_e is binary; for every positive p, z_p is binary. The constraints are sum_{e incident to p} x_e = 2 z_p and sum_{e incident to c} x_e <= 1. The first objective maximizes sum_p z_p. Historical deterministic positive ordering resolves a same-cardinality selection when the upper-bound construction succeeds; an exact sparse MILP recovers the optimum when it does not. With selected positives frozen, sparse minimum-weight full bipartite matching minimizes sum_e composite_distance_e x_e. Candidate-index machine-epsilon perturbation and stable ID ordering retain the frozen tie principle. No legal edge is removed for computation.

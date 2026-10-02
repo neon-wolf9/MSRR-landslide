@@ -1,0 +1,71 @@
+{
+  "expected_dims": {
+    "A0_RAW": 792,
+    "A1_RAW_PLUS_SIGNED": 1584,
+    "A2_RAW_PLUS_ABSDEV": 1584,
+    "A3_FULL_REL_NO_SUMMARY": 2376,
+    "A4_STATIC_REL_ONLY": 976,
+    "A5_RAIN_REL_ONLY": 2262,
+    "A6_FULL_MSRR": 2446
+  },
+  "experiment": "MSRR representation ablation, not new-model search",
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "outer_test_used_for_selection": false,
+  "post_test_rescue_allowed": false,
+  "script": "119_RUN_MSRR_REPRESENTATION_ABLATION_5FOLD_ONE_SHOT.py",
+  "seed": 7,
+  "sha256": "e01a99e25ac4b40d33ac85688eb1b92da77e212ce205981f0681ce83306e7b05",
+  "variants": [
+    "A0_RAW",
+    "A1_RAW_PLUS_SIGNED",
+    "A2_RAW_PLUS_ABSDEV",
+    "A3_FULL_REL_NO_SUMMARY",
+    "A4_STATIC_REL_ONLY",
+    "A5_RAIN_REL_ONLY",
+    "A6_FULL_MSRR"
+  ],
+  "xgb_grid": [
+    {
+      "colsample_bytree": 0.85,
+      "config_id": "D4",
+      "gamma": 0.0,
+      "learning_rate": 0.04,
+      "max_depth": 4,
+      "min_child_weight": 2.0,
+      "n_estimators": 450,
+      "reg_alpha": 0.05,
+      "reg_lambda": 5.0,
+      "subsample": 0.9
+    },
+    {
+      "colsample_bytree": 0.8,
+      "config_id": "D6",
+      "gamma": 0.0,
+      "learning_rate": 0.03,
+      "max_depth": 6,
+      "min_child_weight": 2.0,
+      "n_estimators": 650,
+      "reg_alpha": 0.05,
+      "reg_lambda": 5.0,
+      "subsample": 0.9
+    },
+    {
+      "colsample_bytree": 0.75,
+      "config_id": "D8",
+      "gamma": 0.0,
+      "learning_rate": 0.02,
+      "max_depth": 8,
+      "min_child_weight": 2.0,
+      "n_estimators": 850,
+      "reg_alpha": 0.1,
+      "reg_lambda": 7.0,
+      "subsample": 0.9
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "GATE127_DECISION": "PASS_PROTOCOL_RECOVERED_REPLAY_PARTIAL",
+  "balance_diagnostics_complete_for_available_frozen_fields": true,
+  "core_protocol_recovered": true,
+  "critical_unrecoverable_fields": [],
+  "exact_current_benchmark_replay_both_events": false,
+  "reason": "Core protocol fields are fully recovered, but exact end-to-end replay of both current benchmark versions is partial."
+}

@@ -1,0 +1,27 @@
+{
+  "MSRR": {
+    "AUPRC": 0.3972833869106075,
+    "AUROC": 0.5886900320797634,
+    "Edge": 0.6069739952718676,
+    "StrictPair": 0.4444444444444444
+  },
+  "RAW": {
+    "AUPRC": 0.3347278473602975,
+    "AUROC": 0.5109685615523476,
+    "Edge": 0.5203900709219859,
+    "StrictPair": 0.35106382978723405
+  },
+  "bootstrap_ci_low_gt0_out_of_4": 4,
+  "deltas": {
+    "AUPRC": 0.06255553955031001,
+    "AUROC": 0.07772147052741585,
+    "Edge": 0.08658392434988171,
+    "StrictPair": 0.09338061465721037
+  },
+  "gate124b_decision": "STRONG_CROSS_EVENT_TRANSFER",
+  "metric_wins_out_of_4": 4,
+  "next_step": "FREEZE_EXTERNAL_RESULT_AND_WRITE_PAPER",
+  "post_external_result_rescue_allowed": false,
+  "primary_backbone": "XGBoost",
+  "status": "PASS_124D_KYUSHU2017_EXTERNAL_VALIDATION_COMPLETE"
+}

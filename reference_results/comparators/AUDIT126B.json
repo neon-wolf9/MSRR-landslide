@@ -1,0 +1,91 @@
+{
+  "MSRR_dim": 2446,
+  "PairDiff_fit_intercept": false,
+  "PairDiff_n_jobs": 1,
+  "PairDiff_score_consistency": "PASS",
+  "RAW_dim": 792,
+  "all_OOF_finite": true,
+  "all_XGB_n_jobs_1": true,
+  "all_methods_contemporaneous": true,
+  "all_protected_files_unchanged": true,
+  "control_rank_not_predictor": true,
+  "controls": 10112,
+  "five_folds_complete": true,
+  "historical_reference_is_descriptive_only": true,
+  "matched_sets": 5056,
+  "no_matched_set_overlap": true,
+  "no_train_val_test_row_overlap": true,
+  "one_OOF_score_per_candidate_per_method": true,
+  "outer_test_never_selects_config": true,
+  "pair_ordering_correct": true,
+  "pair_set_id_not_predictor": true,
+  "pairdiff_identity": [
+    {
+      "human_fold": 1,
+      "max_abs_error": 2.6201263381153694e-14
+    },
+    {
+      "human_fold": 2,
+      "max_abs_error": 4.085620730620576e-14
+    },
+    {
+      "human_fold": 3,
+      "max_abs_error": 1.7763568394002505e-14
+    },
+    {
+      "human_fold": 4,
+      "max_abs_error": 2.220446049250313e-14
+    },
+    {
+      "human_fold": 5,
+      "max_abs_error": 1.865174681370263e-14
+    }
+  ],
+  "positive": 5056,
+  "post_result_rescue_allowed": false,
+  "preregistration_unchanged": true,
+  "ranker_qid_not_predictor": true,
+  "rows": 15168,
+  "sample_role_not_predictor": true,
+  "scientific_results_seen_before_technical_amendment": false,
+  "splits": [
+    {
+      "human_fold": 1,
+      "sha256": "46d25b5b5004f63c5d7f1619a19570c38bfaef7b95329ff4bf02112a73784b9d",
+      "test": 1011,
+      "train": 3034,
+      "validation": 1011
+    },
+    {
+      "human_fold": 2,
+      "sha256": "8d318815114249dce6eb41e2e30e3aaab7c880570b9c74f92e10afdfb195f965",
+      "test": 1011,
+      "train": 3034,
+      "validation": 1011
+    },
+    {
+      "human_fold": 3,
+      "sha256": "a5a7bc52ebfce7b9cd3f2a6bb03ac96d41183db976d2c40b80561d395ee72aae",
+      "test": 1011,
+      "train": 3034,
+      "validation": 1011
+    },
+    {
+      "human_fold": 4,
+      "sha256": "7eaed8c4df497e287063d9c0438d5be65d55951e80691b36a3daeea4952f52dd",
+      "test": 1011,
+      "train": 3033,
+      "validation": 1012
+    },
+    {
+      "human_fold": 5,
+      "sha256": "c5884707b60bb85456915445dff88d9562b19c6411a8900b702a7e94737bf64e",
+      "test": 1012,
+      "train": 3033,
+      "validation": 1011
+    }
+  ],
+  "status": "PASS_126B_TASK_ALIGNED_BASELINES_COMPLETE",
+  "train_only_standardization": true,
+  "xgb_constructor_checks": []
+}

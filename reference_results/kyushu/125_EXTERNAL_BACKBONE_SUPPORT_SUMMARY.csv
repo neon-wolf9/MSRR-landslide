@@ -1,0 +1,5 @@
+backbone,external_status,positive_metric_deltas_out_of_4,bootstrap_ci_low_gt0_out_of_4,observed_support,bootstrap_support
+ElasticNet-Logistic,NEW_125_CONFIRMATORY,4,4,True,True
+MLP,NEW_125_CONFIRMATORY,4,4,True,True
+HistGradientBoosting,NEW_125_CONFIRMATORY,4,4,True,True
+XGBoost,ALREADY_OBSERVED_PRIMARY_124D,4,4,True,True

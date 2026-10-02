@@ -1,0 +1,6 @@
+outer_fold,n_spies,threshold_rule,threshold,n_RN,brf_n_estimators,brf_max_depth,brf_min_samples_leaf,brf_replacement
+1,455,spy_q10,0.07466666666666669,2932,500,12.0,20,False
+2,455,spy_q10,0.07666666666666666,3120,300,,1,False
+3,455,spy_q10,0.07133333333333336,3048,300,,20,True
+4,455,spy_q10,0.07,2831,300,,5,True
+5,455,spy_q10,0.07,2895,300,12.0,1,True

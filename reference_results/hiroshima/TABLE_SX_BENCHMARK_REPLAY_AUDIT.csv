@@ -1,0 +1,13 @@
+Item,Hiroshima formal,Hiroshima replay,Hiroshima status,Kyushu formal,Kyushu replay,Kyushu status
+positive candidates,5075,5075,PASS,1694,1694,PASS
+control candidates,28072,28072,PASS,11784,11784,PASS
+legal edges,2909329,2909329,PASS_REGENERATED,1114829,1114829,PASS_REGENERATED
+matched positives,5056,5056,PASS,1692,1692,PASS
+matched controls,10112,10112,PASS,3384,3384,PASS
+matched sets,5056,5056,PASS,1692,1692,PASS
+excluded positives,19,19,PASS,2,2,PASS
+duplicate controls,0,0,PASS,0,0,PASS
+partial positives,0,0,PASS,0,0,PASS
+canonical membership hash,27f949ed8e1257f7540821e16882e317a81c3d9bfab0ecde9b6c5387e1aa7c45,27f949ed8e1257f7540821e16882e317a81c3d9bfab0ecde9b6c5387e1aa7c45,PASS,8719ca2e3114a70c3b12047355597e2591185f8ec9fd26ce677eb98aaac21f79,8719ca2e3114a70c3b12047355597e2591185f8ec9fd26ce677eb98aaac21f79,PASS
+fold assignment,5056 mapped,5056 mapped,PASS,N/A,N/A,PASS_NA
+deterministic second run,required,True,PASS,required,True,PASS

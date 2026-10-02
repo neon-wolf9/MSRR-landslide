@@ -1,0 +1,44 @@
+{
+  "all_four_backbone_support_summary": [
+    {
+      "backbone": "ElasticNet-Logistic",
+      "bootstrap_ci_low_gt0_out_of_4": 4,
+      "bootstrap_support": true,
+      "external_status": "NEW_125_CONFIRMATORY",
+      "observed_support": true,
+      "positive_metric_deltas_out_of_4": 4
+    },
+    {
+      "backbone": "MLP",
+      "bootstrap_ci_low_gt0_out_of_4": 4,
+      "bootstrap_support": true,
+      "external_status": "NEW_125_CONFIRMATORY",
+      "observed_support": true,
+      "positive_metric_deltas_out_of_4": 4
+    },
+    {
+      "backbone": "HistGradientBoosting",
+      "bootstrap_ci_low_gt0_out_of_4": 4,
+      "bootstrap_support": true,
+      "external_status": "NEW_125_CONFIRMATORY",
+      "observed_support": true,
+      "positive_metric_deltas_out_of_4": 4
+    },
+    {
+      "backbone": "XGBoost",
+      "bootstrap_ci_low_gt0_out_of_4": 4,
+      "bootstrap_support": true,
+      "external_status": "ALREADY_OBSERVED_PRIMARY_124D",
+      "observed_support": true,
+      "positive_metric_deltas_out_of_4": 4
+    }
+  ],
+  "gate125_decision": "STRONG_SECONDARY_CROSS_BACKBONE_EXTERNAL_REPLICATION",
+  "new_backbone_bootstrap_support_count": 3,
+  "new_backbone_observed_support_count": 3,
+  "new_backbone_total": 3,
+  "next_step": "INTERPRET_FULL_EXTERNAL_TRANSFER_THEN_DOMAIN_SHIFT_AND_SPATIAL_ANALYSIS",
+  "post_result_rescue_allowed": false,
+  "primary_untouched_xgboost_source": "124D frozen and hash-verified",
+  "status": "PASS_125_KYUSHU2017_FULL_CROSS_BACKBONE_EXTERNAL_COMPLETE"
+}

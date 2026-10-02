@@ -1,0 +1,7 @@
+component,weight,within_group_aggregation,source
+TERRAIN,0.3,mean absolute robust-scaled field difference,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+SOIL,0.15,"mean across depth within property, then mean across six SoilGrids properties",${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+LANDCOVER_VEGETATION,0.15,mean absolute robust-scaled field difference,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+HYDRO_DISTANCE,0.15,mean absolute robust-scaled field difference,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+ACCESSIBILITY_DISTANCE,0.05,mean absolute robust-scaled field difference,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+ANTECEDENT_RAINFALL,0.2,mean absolute robust-scaled field difference,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py

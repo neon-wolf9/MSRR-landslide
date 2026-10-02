@@ -1,0 +1,5 @@
+{
+  "field_count": 92,
+  "source_whitelist": "${PROJECT_ROOT}\\data\\05_final_dataset_assembly\\00_dataset_inventory_and_split_feasibility\\dataset_00_model_feature_whitelist.csv",
+  "static_model_view": "${PROJECT_ROOT}\\data\\03_static_eogis_features\\90_third_layer_assembly\\04_static_02_assembly\\03_model_candidate_view\\static_third_layer_model_candidate_view.parquet"
+}

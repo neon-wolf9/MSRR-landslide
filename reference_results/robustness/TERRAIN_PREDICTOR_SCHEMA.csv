@@ -1,0 +1,41 @@
+variable,source_derivative,native_resolution,aggregation_to_250m,missing_policy,used_in_model,used_in_matching,used_in_common_support,native_method,statistic
+dem_elevation_mean,elevation,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,True,False,Frozen DEM value,mean
+dem_elevation_median,elevation,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Frozen DEM value,median
+dem_elevation_std,elevation,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Frozen DEM value,std
+dem_elevation_min,elevation,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Frozen DEM value,min
+dem_elevation_max,elevation,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Frozen DEM value,max
+dem_slope_mean,slope,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,True,False,"Horn 3x3 gradient; atan(hypot(dzdx,dzdy)) in degrees",mean
+dem_slope_median,slope,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,"Horn 3x3 gradient; atan(hypot(dzdx,dzdy)) in degrees",median
+dem_slope_std,slope,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,"Horn 3x3 gradient; atan(hypot(dzdx,dzdy)) in degrees",std
+dem_slope_min,slope,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,"Horn 3x3 gradient; atan(hypot(dzdx,dzdy)) in degrees",min
+dem_slope_max,slope,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,"Horn 3x3 gradient; atan(hypot(dzdx,dzdy)) in degrees",max
+dem_aspect_sin_mean,aspect_sin,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope east component=-dzdx/gradient,mean
+dem_aspect_sin_median,aspect_sin,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope east component=-dzdx/gradient,median
+dem_aspect_sin_std,aspect_sin,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope east component=-dzdx/gradient,std
+dem_aspect_sin_min,aspect_sin,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope east component=-dzdx/gradient,min
+dem_aspect_sin_max,aspect_sin,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope east component=-dzdx/gradient,max
+dem_aspect_cos_mean,aspect_cos,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope north component=-dzdy/gradient,mean
+dem_aspect_cos_median,aspect_cos,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope north component=-dzdy/gradient,median
+dem_aspect_cos_std,aspect_cos,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope north component=-dzdy/gradient,std
+dem_aspect_cos_min,aspect_cos,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope north component=-dzdy/gradient,min
+dem_aspect_cos_max,aspect_cos,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,Downslope north component=-dzdy/gradient,max
+dem_profile_curvature_mean,profile_curvature,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,True,False,-(r*p^2+2*s*p*q+t*q^2)/((p^2+q^2)*(1+p^2+q^2)^1.5),mean
+dem_profile_curvature_median,profile_curvature,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,-(r*p^2+2*s*p*q+t*q^2)/((p^2+q^2)*(1+p^2+q^2)^1.5),median
+dem_profile_curvature_std,profile_curvature,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,-(r*p^2+2*s*p*q+t*q^2)/((p^2+q^2)*(1+p^2+q^2)^1.5),std
+dem_profile_curvature_min,profile_curvature,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,-(r*p^2+2*s*p*q+t*q^2)/((p^2+q^2)*(1+p^2+q^2)^1.5),min
+dem_profile_curvature_max,profile_curvature,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,-(r*p^2+2*s*p*q+t*q^2)/((p^2+q^2)*(1+p^2+q^2)^1.5),max
+dem_plan_curvature_mean,plan_curvature,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,True,False,(r*q^2-2*s*p*q+t*p^2)/(p^2+q^2)^1.5,mean
+dem_plan_curvature_median,plan_curvature,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,(r*q^2-2*s*p*q+t*p^2)/(p^2+q^2)^1.5,median
+dem_plan_curvature_std,plan_curvature,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,(r*q^2-2*s*p*q+t*p^2)/(p^2+q^2)^1.5,std
+dem_plan_curvature_min,plan_curvature,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,(r*q^2-2*s*p*q+t*p^2)/(p^2+q^2)^1.5,min
+dem_plan_curvature_max,plan_curvature,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,(r*q^2-2*s*p*q+t*p^2)/(p^2+q^2)^1.5,max
+dem_twi_mean,twi,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,True,False,,mean
+dem_twi_median,twi,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,,median
+dem_twi_std,twi,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,,std
+dem_twi_min,twi,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,,min
+dem_twi_max,twi,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,,max
+dem_roughness_mean,roughness,10 m,250m polygon zonal mean,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,3x3 maximum elevation minus minimum elevation,mean
+dem_roughness_median,roughness,10 m,250m polygon zonal median,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,3x3 maximum elevation minus minimum elevation,median
+dem_roughness_std,roughness,10 m,250m polygon zonal std,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,3x3 maximum elevation minus minimum elevation,std
+dem_roughness_min,roughness,10 m,250m polygon zonal min,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,3x3 maximum elevation minus minimum elevation,min
+dem_roughness_max,roughness,10 m,250m polygon zonal max,PRESERVE_TRUE_NA_NO_GLOBAL_IMPUTATION,True,False,False,3x3 maximum elevation minus minimum elevation,max

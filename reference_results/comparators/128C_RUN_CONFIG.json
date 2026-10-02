@@ -1,0 +1,33 @@
+{
+  "experiment": "128C_PUBLISHED_METHOD_PAIRED_BOOTSTRAP",
+  "B": 10000,
+  "seed": 20260829,
+  "seed_authority": "Experiment 121 actual frozen authority",
+  "bootstrap_unit": "matched_set / pair_set_id",
+  "n_matched_sets_per_replicate": 5056,
+  "bootstrap_instance_id": "zero-based draw position within each replicate",
+  "duplicate_handling": "multiplicity-preserving pair counts, verified against explicit repeated 3-row blocks",
+  "same_sampled_sets_all_methods": true,
+  "CI_method": "percentile [2.5, 97.5]",
+  "p_value_method": "Experiment 121 two-sided add-one: 2*min((1+count(delta<=0))/(B+1),(1+count(delta>=0))/(B+1)), capped at 1",
+  "comparison_direction": "MSRR-XGBoost minus competitor",
+  "model_training_performed": false,
+  "inputs": {
+    "PU-BaggingDT": {
+      "path": "${PROJECT_ROOT}\\experiments\\MSRR_128B1_PUBLISHED_ALGORITHM_COMPARISON_5FOLD\\128B1_OOF_PU_BAGGINGDT.parquet",
+      "sha256": "a69d16b3571dd22eee623e6d1473f136f26e627bb5e45d68211828ad51965e21"
+    },
+    "Spy-PU+BRF": {
+      "path": "${PROJECT_ROOT}\\experiments\\MSRR_128B1_PUBLISHED_ALGORITHM_COMPARISON_5FOLD\\128B1_OOF_SPY_PU_BRF.parquet",
+      "sha256": "ddbcb331d02d14f7966a0146290dc349699ae839cc5a953b36408856814a7ea0"
+    },
+    "PU-pullbaggingDT": {
+      "path": "${PROJECT_ROOT}\\experiments\\MSRR_128B1_PUBLISHED_ALGORITHM_COMPARISON_5FOLD\\128B1_OOF_PU_PULLBAGGINGDT.parquet",
+      "sha256": "bd1093e68d6f181ad71bac428aa648676bceddaccd2e110aacff109f05d24e1e"
+    },
+    "MSRR-XGBoost": {
+      "path": "${PROJECT_ROOT}\\experiments\\MSRR_121_PAIRED_BOOTSTRAP\\120B_RECOVERED_ROW_LEVEL_OOF.parquet",
+      "sha256": "d7687627f793fda5f28a9342720a1dbe6194b0a24d0f347e95e05f839cc9d63e"
+    }
+  }
+}

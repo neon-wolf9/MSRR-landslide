@@ -1,0 +1,72 @@
+{
+  "definition_of_support": "MSRR beats RAW on >=3/4 OOF metrics",
+  "gate120b_decision": "STRONG_MODEL_AGNOSTIC_SUPPORT",
+  "next_step": "PAIRED_BOOTSTRAP_STATISTICAL_ANALYSIS",
+  "post_result_rescue_allowed": false,
+  "results": {
+    "ElasticNet-Logistic__MSRR": {
+      "AUPRC": 0.723677737770495,
+      "AUROC": 0.8427022021085363,
+      "Edge": 0.8026107594936709,
+      "StrictPair": 0.6932357594936709
+    },
+    "ElasticNet-Logistic__RAW": {
+      "AUPRC": 0.467294531997702,
+      "AUROC": 0.6371939460009914,
+      "Edge": 0.6601068037974683,
+      "StrictPair": 0.5083069620253164
+    },
+    "HistGradientBoosting__MSRR": {
+      "AUPRC": 0.7848259264220583,
+      "AUROC": 0.875920837725074,
+      "Edge": 0.8405854430379747,
+      "StrictPair": 0.7448575949367089
+    },
+    "HistGradientBoosting__RAW": {
+      "AUPRC": 0.47637603896070424,
+      "AUROC": 0.6614055881093776,
+      "Edge": 0.6910601265822784,
+      "StrictPair": 0.5399525316455697
+    },
+    "MLP__MSRR": {
+      "AUPRC": 0.7705656883118209,
+      "AUROC": 0.8650901047508411,
+      "Edge": 0.8300039556962026,
+      "StrictPair": 0.729628164556962
+    },
+    "MLP__RAW": {
+      "AUPRC": 0.47955596297728786,
+      "AUROC": 0.6374460375284159,
+      "Edge": 0.6825553797468354,
+      "StrictPair": 0.5361946202531646
+    },
+    "XGBoost__MSRR": {
+      "AUPRC": 0.7919079294572564,
+      "AUROC": 0.881482176130503,
+      "Edge": 0.8464200949367089,
+      "StrictPair": 0.7501977848101266
+    },
+    "XGBoost__RAW": {
+      "AUPRC": 0.48941193167880825,
+      "AUROC": 0.6712840611574418,
+      "Edge": 0.7090585443037974,
+      "StrictPair": 0.5597310126582279
+    }
+  },
+  "status": "PASS_120B_CROSS_BACKBONE_COMPLETED",
+  "supported_backbone_count": 4,
+  "supported_backbones": [
+    "ElasticNet-Logistic",
+    "MLP",
+    "HistGradientBoosting",
+    "XGBoost"
+  ],
+  "technical_lightgbm_exclusion": {
+    "excluded_backbone": "LightGBM",
+    "performance_based_exclusion": false,
+    "reason": "Native Windows access-violation on formal project data. Synthetic fit passed in repaired clone, but formal BASE-04 fit still failed. No completed LightGBM scientific result from 120 was available or used.",
+    "replacement": "sklearn HistGradientBoostingClassifier",
+    "scientific_reason_for_replacement": "Preserve a second tree-boosting family without relying on the technically unstable LightGBM native runtime."
+  },
+  "total_backbones": 4
+}

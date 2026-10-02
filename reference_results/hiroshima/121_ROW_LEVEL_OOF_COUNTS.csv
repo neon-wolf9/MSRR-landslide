@@ -1,0 +1,9 @@
+backbone,representation,n
+ElasticNet-Logistic,MSRR,15168
+ElasticNet-Logistic,RAW,15168
+HistGradientBoosting,MSRR,15168
+HistGradientBoosting,RAW,15168
+MLP,MSRR,15168
+MLP,RAW,15168
+XGBoost,MSRR,15168
+XGBoost,RAW,15168

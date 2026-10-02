@@ -1,0 +1,133 @@
+{
+  "alignment_key": [
+    "unit_id",
+    "pair_set_id"
+  ],
+  "row_order_join_used": false,
+  "methods": [
+    {
+      "method": "PU-BaggingDT",
+      "rows": 15168,
+      "sets": 5056,
+      "positives": 5056,
+      "controls": 10112,
+      "rows_pass": true,
+      "sets_pass": true,
+      "positives_pass": true,
+      "controls_pass": true,
+      "unique_key_pass": true,
+      "finite_score_pass": true,
+      "set_structure_pass": true,
+      "pass": true
+    },
+    {
+      "method": "Spy-PU+BRF",
+      "rows": 15168,
+      "sets": 5056,
+      "positives": 5056,
+      "controls": 10112,
+      "rows_pass": true,
+      "sets_pass": true,
+      "positives_pass": true,
+      "controls_pass": true,
+      "unique_key_pass": true,
+      "finite_score_pass": true,
+      "set_structure_pass": true,
+      "pass": true
+    },
+    {
+      "method": "PU-pullbaggingDT",
+      "rows": 15168,
+      "sets": 5056,
+      "positives": 5056,
+      "controls": 10112,
+      "rows_pass": true,
+      "sets_pass": true,
+      "positives_pass": true,
+      "controls_pass": true,
+      "unique_key_pass": true,
+      "finite_score_pass": true,
+      "set_structure_pass": true,
+      "pass": true
+    },
+    {
+      "method": "MSRR-XGBoost",
+      "rows": 15168,
+      "sets": 5056,
+      "positives": 5056,
+      "controls": 10112,
+      "rows_pass": true,
+      "sets_pass": true,
+      "positives_pass": true,
+      "controls_pass": true,
+      "unique_key_pass": true,
+      "finite_score_pass": true,
+      "set_structure_pass": true,
+      "pass": true
+    }
+  ],
+  "cross_method_alignment_against_msrr": {
+    "PU-BaggingDT": {
+      "unit_alignment": true,
+      "pair_alignment": true,
+      "unit_pair_key_alignment": true,
+      "label_alignment": true,
+      "fold_alignment": true,
+      "pass": true
+    },
+    "Spy-PU+BRF": {
+      "unit_alignment": true,
+      "pair_alignment": true,
+      "unit_pair_key_alignment": true,
+      "label_alignment": true,
+      "fold_alignment": true,
+      "pass": true
+    },
+    "PU-pullbaggingDT": {
+      "unit_alignment": true,
+      "pair_alignment": true,
+      "unit_pair_key_alignment": true,
+      "label_alignment": true,
+      "fold_alignment": true,
+      "pass": true
+    },
+    "MSRR-XGBoost": {
+      "unit_alignment": true,
+      "pair_alignment": true,
+      "unit_pair_key_alignment": true,
+      "label_alignment": true,
+      "fold_alignment": true,
+      "pass": true
+    }
+  },
+  "all_input_alignment_pass": true,
+  "pass": true,
+  "duplicate_occurrence_implementation_audit": {
+    "replicate_checked": 1,
+    "bootstrap_instance_id_min": 0,
+    "bootstrap_instance_id_max": 5055,
+    "sampled_occurrences": 5056,
+    "unique_source_sets": 3183,
+    "duplicate_occurrences_preserved": true,
+    "implementation": "draw-column position is bootstrap_instance_id; multiplicity weights are algebraically identical to explicit repeated 3-row blocks",
+    "methods": {
+      "PU-BaggingDT": {
+        "max_abs_error": 1.1102230246251565e-16,
+        "pass": true
+      },
+      "Spy-PU+BRF": {
+        "max_abs_error": 0.0,
+        "pass": true
+      },
+      "PU-pullbaggingDT": {
+        "max_abs_error": 5.551115123125783e-17,
+        "pass": true
+      },
+      "MSRR-XGBoost": {
+        "max_abs_error": 1.1102230246251565e-16,
+        "pass": true
+      }
+    },
+    "pass": true
+  }
+}

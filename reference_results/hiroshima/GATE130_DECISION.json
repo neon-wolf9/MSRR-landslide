@@ -1,0 +1,6 @@
+{
+  "GATE130_DECISION": "PASS_FULL_END_TO_END_BENCHMARK_REPLAY",
+  "all_required_gates_pass": true,
+  "failure_stage": null,
+  "created_utc": "2026-09-07T08:28:21.661406+00:00"
+}

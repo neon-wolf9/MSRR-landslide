@@ -1,0 +1,12 @@
+rule_id,variable_or_stage,condition,threshold,hard_or_soft,event,source
+R1,geology,same audited parent; non-igneous requires same class,categorical,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R2,missingness,matching_missingness_pattern_id equal,exact,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+R3,soil,soil_completeness_block equal,exact,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01b_revised_matching_protocol\revised_hard_control_01.py
+R4,slope,abs difference <= 5,5 degrees,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R5,elevation,abs difference <= 250,250 m,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R6,NDVI,abs difference <= 0.20,0.20,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R7,centroid distance,"Euclidean projected-centroid distance <= 20,000",20 km,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R8,rainfall fields,each absolute robust-z difference <= 0.50,0.50,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R9,rainfall group,mean of four absolute robust-z differences <= 0.35,0.35,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01c_matching_sensitivity_audit\scripts\hard_control_01b_matching_sensitivity.py
+R10,control capacity,each control assigned at most once,1,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\02_formal_pair_assignment\hard_control_02_formal_pair_assignment.py
+R11,adequacy,exactly two legal controls simultaneously feasible,2,HARD,Both,${PROJECT_ROOT}\data\06_hard_control\01f_common_support_protocol\hard_control_01e_common_support_protocol.py

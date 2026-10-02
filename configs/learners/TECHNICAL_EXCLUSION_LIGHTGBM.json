@@ -1,0 +1,7 @@
+{
+  "excluded_backbone": "LightGBM",
+  "performance_based_exclusion": false,
+  "reason": "Native Windows access-violation on formal project data. Synthetic fit passed in repaired clone, but formal BASE-04 fit still failed. No completed LightGBM scientific result from 120 was available or used.",
+  "replacement": "sklearn HistGradientBoostingClassifier",
+  "scientific_reason_for_replacement": "Preserve a second tree-boosting family without relying on the technically unstable LightGBM native runtime."
+}

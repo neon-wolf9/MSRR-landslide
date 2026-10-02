@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-05T05:52:54.617722+00:00",
+  "critical_unrecoverable_fields": [],
+  "gate": "PASS_PROTOCOL_RECOVERED_REPLAY_PARTIAL",
+  "historical_version_note": "Hiroshima original formal assignment differs from current HC-BUG-03 repaired production membership by 24 control slots",
+  "noncritical_unrecoverable": [
+    "Kyushu 1:3 historical diagnostic",
+    "Kyushu exact legal-edge graph replay",
+    "Kyushu within-set standardized field differences from retained summary artifacts"
+  ],
+  "protected_input_hash_changes": [],
+  "provenance_files": 700,
+  "status": "PASS_127_MATCHING_REPRODUCIBILITY_AUDIT_COMPLETE"
+}

@@ -1,0 +1,197 @@
+{
+  "analysis_scope": "spatialization of frozen matched-set predictions only",
+  "cross_backbone_consensus": {
+    "Hiroshima_2018": {
+      "delta_margin_median_across_backbones": {
+        "max": 15.924597783385178,
+        "mean": 1.9254157726933607,
+        "median": 1.2536038196646364,
+        "min": -9.103710448452846,
+        "n": 5056,
+        "q25": 0.0760841310709558,
+        "q75": 3.284373741903572
+      },
+      "event": "Hiroshima_2018",
+      "fraction_all4_backbones_delta_positive": 0.5460838607594937,
+      "fraction_at_least3_backbones_delta_positive": 0.7025316455696202,
+      "mean_corrected_backbones_per_set": 1.0715981012658229,
+      "mean_lost_backbones_per_set": 0.2978639240506329,
+      "mean_positive_backbones_per_set": 2.9576740506329116,
+      "n_sets": 5056,
+      "positive_backbone_count_distribution": {
+        "0": 512,
+        "1": 447,
+        "2": 545,
+        "3": 791,
+        "4": 2761
+      },
+      "sets_all4_backbones_delta_positive": 2761,
+      "sets_at_least3_backbones_delta_positive": 3552
+    },
+    "Kyushu_2017_Asakura_Toho": {
+      "delta_margin_median_across_backbones": {
+        "max": 10.719694550108324,
+        "mean": -0.2667926099283592,
+        "median": -0.0025549061847638943,
+        "min": -13.60690613664937,
+        "n": 1692,
+        "q25": -1.050597885519755,
+        "q75": 0.9417588395386589
+      },
+      "event": "Kyushu_2017_Asakura_Toho",
+      "fraction_all4_backbones_delta_positive": 0.233451536643026,
+      "fraction_at_least3_backbones_delta_positive": 0.3942080378250591,
+      "mean_corrected_backbones_per_set": 0.9202127659574468,
+      "mean_lost_backbones_per_set": 0.4562647754137116,
+      "mean_positive_backbones_per_set": 1.9645390070921986,
+      "n_sets": 1692,
+      "positive_backbone_count_distribution": {
+        "0": 419,
+        "1": 284,
+        "2": 322,
+        "3": 272,
+        "4": 395
+      },
+      "sets_all4_backbones_delta_positive": 395,
+      "sets_at_least3_backbones_delta_positive": 667
+    }
+  },
+  "geometry": {
+    "Hiroshima_2018": {
+      "coverage": 1.0,
+      "covered_anchor_units": 5056,
+      "crs": "EPSG:6671",
+      "discovery": "automatic_127B",
+      "layer": "",
+      "path": "${PROJECT_ROOT}\\data\\01_county_prediction_domain\\02_grid_250m\\hiroshima_grid_250m_master.gpkg",
+      "required_anchor_units": 5056,
+      "rows": 139364
+    },
+    "Kyushu_2017_Asakura_Toho": {
+      "coverage": 1.0,
+      "covered_anchor_units": 1692,
+      "crs": "EPSG:6670",
+      "discovery": "automatic",
+      "layer": "",
+      "path": "${PROJECT_ROOT}\\external\\kyushu_2017_asakura_toho\\02_boundary_grid\\kyushu_2017_250m_master_grid_v1.gpkg",
+      "required_anchor_units": 1692,
+      "rows": 13478
+    }
+  },
+  "input_files": {
+    "external_full_panel": {
+      "path": "${PROJECT_ROOT}\\external\\kyushu_2017_asakura_toho\\100_external_validation\\MSRR_KYUSHU2017_EXTERNAL_FULL_PANEL_V2\\125_EXTERNAL_PREDICTIONS_FULL_PANEL_WITH_LABELS.parquet",
+      "sha256": "674140eda21230a485f71e7dcd9dacc76f9fba0d37b97a0a73bce0e30e106c93"
+    },
+    "internal_oof": {
+      "path": "${PROJECT_ROOT}\\experiments\\MSRR_121_PAIRED_BOOTSTRAP\\120B_RECOVERED_ROW_LEVEL_OOF.parquet",
+      "sha256": "d7687627f793fda5f28a9342720a1dbe6194b0a24d0f347e95e05f839cc9d63e"
+    },
+    "transfer_gap_reference": {
+      "path": "${PROJECT_ROOT}\\external\\kyushu_2017_asakura_toho\\100_external_validation\\MSRR_KYUSHU2017_EXTERNAL_FULL_PANEL_V2\\125_INTERNAL_VS_EXTERNAL_TRANSFER_GAP.csv",
+      "sha256": "fb4b0e967fed133fe3b4d81eabe14182b7df532bbcdbaffcd6cce2bfe97871d9"
+    }
+  },
+  "next_step": "Interpret 127, select final paper maps, then freeze all core experiments.",
+  "recommended_paper_interpretation": "Use these results to assess whether the MSRR matched-set margin gain is spatially widespread or concentrated. Do not describe the maps as landslide occurrence probability or wall-to-wall susceptibility maps.",
+  "scientific_guardrails": {
+    "arbitrary_grid_inference": false,
+    "calibrated_probability_map": false,
+    "control_semantics": "matched non-inventory control; not confirmed geological absence",
+    "mapped_quantity": "matched-set score margin and MSRR-minus-RAW margin improvement",
+    "model_training_or_selection": false,
+    "spatial_anchor": "inventory-supported positive grid of each matched set"
+  },
+  "spatial_block_audit": {
+    "Hiroshima_2018": {
+      "blocks_consensus_positive_median_delta": 15,
+      "blocks_n_ge_30": 15,
+      "blocks_xgb_positive_median_delta": 15,
+      "blocks_xgb_positive_strictpair_gain": 15,
+      "fraction_blocks_consensus_positive_median_delta": 1.0,
+      "fraction_blocks_xgb_positive_median_delta": 1.0,
+      "fraction_blocks_xgb_positive_strictpair_gain": 1.0,
+      "total_blocks": 15
+    },
+    "Kyushu_2017_Asakura_Toho": {
+      "blocks_consensus_positive_median_delta": 5,
+      "blocks_n_ge_30": 16,
+      "blocks_xgb_positive_median_delta": 6,
+      "blocks_xgb_positive_strictpair_gain": 13,
+      "fraction_blocks_consensus_positive_median_delta": 0.3125,
+      "fraction_blocks_xgb_positive_median_delta": 0.375,
+      "fraction_blocks_xgb_positive_strictpair_gain": 0.8125,
+      "total_blocks": 16
+    },
+    "block_definition": "4x4 coordinate-quantile blocks based only on matched-set anchor locations",
+    "minimum_n_for_summary": 30
+  },
+  "status": "PASS_127B_SPATIAL_MATCHED_MARGIN_ANALYSIS_COMPLETE",
+  "strictpair_reproduction": {
+    "all_pass_1e-6": true,
+    "max_abs_error": 5.551115123125783e-17,
+    "rows": 8
+  },
+  "xgboost": {
+    "Hiroshima_2018": {
+      "delta_margin": {
+        "max": 10.886046429521102,
+        "mean": 1.7205677900472307,
+        "median": 1.2840338250076844,
+        "min": -8.845865161460981,
+        "n": 5056,
+        "q25": 0.0021491511625372495,
+        "q75": 3.0403203474496365
+      },
+      "delta_margin_positive_fraction": 0.7501977848101266,
+      "delta_margin_positive_sets": 3793,
+      "event": "Hiroshima_2018",
+      "msrr_strictpair": 0.7501977848101266,
+      "n_sets": 5056,
+      "raw_strictpair": 0.5597310126582279,
+      "strictpair_gain": 0.19046677215189867,
+      "transition_counts": {
+        "Corrected by MSRR": 1366,
+        "Lost by MSRR": 403,
+        "Retained success": 2427,
+        "Still unresolved": 860
+      },
+      "transition_fractions": {
+        "Corrected by MSRR": 0.2701740506329114,
+        "Lost by MSRR": 0.07970727848101265,
+        "Retained success": 0.48002373417721517,
+        "Still unresolved": 0.17009493670886075
+      }
+    },
+    "Kyushu_2017_Asakura_Toho": {
+      "delta_margin": {
+        "max": 5.939733788038443,
+        "mean": -0.12304120024193653,
+        "median": -0.04634782406132626,
+        "min": -4.7201943531529,
+        "n": 1692,
+        "q25": -1.0599172963881067,
+        "q75": 0.9008946246473347
+      },
+      "delta_margin_positive_fraction": 0.4875886524822695,
+      "delta_margin_positive_sets": 825,
+      "event": "Kyushu_2017_Asakura_Toho",
+      "msrr_strictpair": 0.4444444444444444,
+      "n_sets": 1692,
+      "raw_strictpair": 0.35106382978723405,
+      "strictpair_gain": 0.09338061465721037,
+      "transition_counts": {
+        "Corrected by MSRR": 395,
+        "Lost by MSRR": 237,
+        "Retained success": 357,
+        "Still unresolved": 703
+      },
+      "transition_fractions": {
+        "Corrected by MSRR": 0.233451536643026,
+        "Lost by MSRR": 0.1400709219858156,
+        "Retained success": 0.21099290780141844,
+        "Still unresolved": 0.41548463356973997
+      }
+    }
+  }
+}

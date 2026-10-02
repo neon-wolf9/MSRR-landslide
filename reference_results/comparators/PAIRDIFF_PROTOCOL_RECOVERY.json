@@ -1,0 +1,23 @@
+{
+  "authoritative_source": "${PROJECT_ROOT}\\scripts\\126C_AUDIT_PAIRDIFF_CONVERGENCE_SENSITIVITY.py",
+  "input_source": "formal 120B/126B dataset loader; original Hiroshima benchmark and temporal protocol",
+  "PAIRDIFF_FEATURE_DEFINITION": "train-only standardized RAW vector; signed edges P-C1, P-C2, C1-P, C2-P in that order",
+  "PAIRDIFF_FEATURE_DIMENSION": 792,
+  "PAIRDIFF_TRAINING_UNIT": "four directed edge rows per complete matched set",
+  "PAIRDIFF_LABEL_DEFINITION": "[1,1,0,0] for [P-C1,P-C2,C1-P,C2-P]",
+  "PAIRDIFF_SCORE_SEMANTICS": "fitted learner score on each standardized candidate row; candidate rows remain ordered P,C1,C2; no aggregation",
+  "ordering": "positive slot 0, controls slots 1 and 2",
+  "weights": "none; balanced directed-edge construction",
+  "preprocessing": "mean/sd fitted on training candidate rows only; sd<1e-6 replaced by 1; identical to 126C",
+  "folds": "formal PRIMARY_BALANCED_SPATIAL_GROUPED_5FOLD; full matched sets atomic",
+  "validation": "mean(AUROC,AUPRC,StrictPair,Edge), ties StrictPair, Edge, AUPRC, AUROC, earliest config",
+  "metrics": "AUROC/AUPRC over candidate rows; StrictPair=P score greater than both controls; Edge=mean of two strict P>C indicators",
+  "logistic_grid_126C": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "logistic_solver": "elasticnet saga, l1_ratio=.5, no intercept, tol=1e-4",
+  "convergence": "126C max_iter 6000 stage; all candidates converged; folds 2 and 3 selected C changed",
+  "difference_126B_vs_126C": "representation, splits, preprocessing and scoring unchanged; only convergence cap audit changed"
+}

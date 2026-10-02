@@ -1,0 +1,19 @@
+{
+  "fold_count": 5,
+  "fold_labels": [
+    "FOLD_1",
+    "FOLD_2",
+    "FOLD_3",
+    "FOLD_4",
+    "FOLD_5"
+  ],
+  "fold_pair_counts": {
+    "FOLD_1": 1011,
+    "FOLD_2": 1011,
+    "FOLD_3": 1011,
+    "FOLD_4": 1011,
+    "FOLD_5": 1012
+  },
+  "pair_cross_fold_count": 0,
+  "spatial_group_cross_fold_count": 0
+}

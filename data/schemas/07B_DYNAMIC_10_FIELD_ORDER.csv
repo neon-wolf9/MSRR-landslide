@@ -1,0 +1,11 @@
+dynamic_index,field_name
+0,rain_30m_mm
+1,rain_1h_mm
+2,rain_3h_mm
+3,rain_6h_mm
+4,rain_12h_mm
+5,rain_24h_mm
+6,rain_48h_mm
+7,rain_72h_mm
+8,rain_120h_mm
+9,api_k090_step30m_120h

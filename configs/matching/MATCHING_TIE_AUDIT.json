@@ -1,0 +1,16 @@
+{
+  "deterministic": true,
+  "explicit_random_seed": null,
+  "mechanisms": [
+    "sorted positive and candidate IDs",
+    "machine-epsilon candidate-index perturbation",
+    "stable mergesort",
+    "lexicographic candidate_unit_id rank tie-break"
+  ],
+  "randomization_used": false,
+  "source_files": [
+    "${PROJECT_ROOT}\\data\\06_hard_control\\01f_common_support_protocol\\hard_control_01e_common_support_protocol.py",
+    "${PROJECT_ROOT}\\data\\06_hard_control\\02_formal_pair_assignment\\hard_control_02_formal_pair_assignment.py",
+    "${PROJECT_ROOT}\\scripts\\kyushu_match_01.py"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "changed_control_slots": 24,
+  "hard_controls": 10112,
+  "pair_sets": 5056,
+  "positive_unit_ids_unchanged": true,
+  "positives": 5056,
+  "training_rows": 15168,
+  "unique_hard_controls": 10112
+}

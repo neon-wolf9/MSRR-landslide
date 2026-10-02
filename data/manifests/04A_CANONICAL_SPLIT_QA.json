@@ -1,0 +1,13 @@
+{
+  "fold_pair_counts": {
+    "FOLD_1": 1011,
+    "FOLD_2": 1011,
+    "FOLD_3": 1011,
+    "FOLD_4": 1011,
+    "FOLD_5": 1012
+  },
+  "group_cross_fold_count": 0,
+  "pair_sets": 5056,
+  "source": "${PROJECT_ROOT}\\data\\05_final_dataset_assembly\\01_spatial_split_protocol\\dataset_01_pair_set_fold_crosswalk.parquet",
+  "spatial_groups": 500
+}

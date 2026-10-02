@@ -1,0 +1,7 @@
+{
+  "comparisons": 12,
+  "observed_delta_gt_0": 12,
+  "ci_low_gt_0": 12,
+  "all_input_alignment_pass": true,
+  "decision": "STRONG_PUBLISHED_METHOD_STATISTICAL_SUPPORT"
+}

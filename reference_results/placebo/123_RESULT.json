@@ -1,0 +1,40 @@
+{
+  "fold_wins": {
+    "TRUE_vs_GLOBAL_Edge": 5,
+    "TRUE_vs_GLOBAL_StrictPair": 5,
+    "TRUE_vs_SHUFFLED_Edge": 5,
+    "TRUE_vs_SHUFFLED_StrictPair": 5
+  },
+  "gate123_decision": "STRONG_MATCHED_CONTEXT_SUPPORT",
+  "next_step": "BUILD_SPATIAL_MSRR_FIGURE_AND_CONTINUE_EXTERNAL_DATASET",
+  "pooled_metric_wins_true_vs_global_out_of_4": 4,
+  "pooled_metric_wins_true_vs_shuffled_out_of_4": 4,
+  "post_result_rescue_allowed": false,
+  "results": {
+    "GLOBAL_CENTERED": {
+      "AUPRC": 0.485822789749464,
+      "AUROC": 0.6709231019230191,
+      "Edge": 0.7022349683544303,
+      "StrictPair": 0.5555775316455697
+    },
+    "RAW": {
+      "AUPRC": 0.48941193167880825,
+      "AUROC": 0.6712840611574418,
+      "Edge": 0.7090585443037974,
+      "StrictPair": 0.5597310126582279
+    },
+    "SHUFFLED_CONTEXT": {
+      "AUPRC": 0.48779131478922877,
+      "AUROC": 0.6659050360644329,
+      "Edge": 0.7058939873417721,
+      "StrictPair": 0.5583465189873418
+    },
+    "TRUE_MSRR": {
+      "AUPRC": 0.7919079294572564,
+      "AUROC": 0.881482176130503,
+      "Edge": 0.8464200949367089,
+      "StrictPair": 0.7501977848101266
+    }
+  },
+  "status": "PASS_123_MATCHED_CONTEXT_PLACEBO_COMPLETE"
+}

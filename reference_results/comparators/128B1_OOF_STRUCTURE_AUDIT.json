@@ -1,0 +1,26 @@
+{
+  "pu_baggingdt": {
+    "controls": 10112,
+    "duplicate_units": 0,
+    "pass": true,
+    "positives": 5056,
+    "rows": 15168,
+    "sets": 5056
+  },
+  "pu_pullbaggingdt": {
+    "controls": 10112,
+    "duplicate_units": 0,
+    "pass": true,
+    "positives": 5056,
+    "rows": 15168,
+    "sets": 5056
+  },
+  "spy_pu_brf": {
+    "controls": 10112,
+    "duplicate_units": 0,
+    "pass": true,
+    "positives": 5056,
+    "rows": 15168,
+    "sets": 5056
+  }
+}

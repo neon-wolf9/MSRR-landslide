@@ -1,0 +1,377 @@
+{
+  "absolute_performance_context_from_125": {
+    "external_minus_internal_metric_cells_negative": 32,
+    "external_minus_internal_metric_cells_nonnegative": 0,
+    "total_metric_cells": 32
+  },
+  "analysis_type": "post-hoc descriptive characterization; no predictive model training",
+  "categorical_shift": {
+    "field": "road_nearest_road_class",
+    "hiroshima_unique_categories": 12,
+    "jensen_shannon_distance_base2": 0.29422901204122953,
+    "kyushu_unique_categories": 9
+  },
+  "events": {
+    "development": "Hiroshima_2018",
+    "external": "Kyushu_2017_Asakura_Toho"
+  },
+  "matched_context_geometry_shift": {
+    "rain_mean_abs_dev_median_wasserstein": 0.029729150933537528,
+    "rain_mean_abs_dev_q90_wasserstein": 0.048600571244529434,
+    "static_median_wasserstein": 0.023729872811927545,
+    "static_q90_wasserstein": 0.13573534586895497
+  },
+  "next_step": "Interpret 126; then run 127 spatial matched-margin visualization.",
+  "rainfall_process_shift": {
+    "median_wasserstein_across_all_summary_field_cells": 0.7514212200542818,
+    "q90_wasserstein_across_all_summary_field_cells": 2.5255853286492127,
+    "summary_rows": 70,
+    "top15_summary_cells_by_wasserstein": [
+      {
+        "delta_median": -3.7891069675546274,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 12.65224400648707,
+        "rain_field": "rain_72h_mm",
+        "summary": "mean",
+        "wasserstein": 3.6784165385568697
+      },
+      {
+        "delta_median": -3.7078635933310062,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 12.558502063695709,
+        "rain_field": "rain_12h_mm",
+        "summary": "mean",
+        "wasserstein": 3.5827281663264006
+      },
+      {
+        "delta_median": -4.061624765396118,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 12.537539427968245,
+        "rain_field": "rain_12h_mm",
+        "summary": "min",
+        "wasserstein": 3.5734158120548862
+      },
+      {
+        "delta_median": -3.1272260261034326,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 13.32316809335349,
+        "rain_field": "rain_6h_mm",
+        "summary": "mean",
+        "wasserstein": 3.0258894282914803
+      },
+      {
+        "delta_median": -2.7095474779605864,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 13.610414068794737,
+        "rain_field": "rain_72h_mm",
+        "summary": "p90",
+        "wasserstein": 2.7354326944513994
+      },
+      {
+        "delta_median": -2.7352681159973145,
+        "ks_statistic": 0.9999340717299579,
+        "psi_hiroshima_bins": 12.631075841659023,
+        "rain_field": "rain_72h_mm",
+        "summary": "min",
+        "wasserstein": 2.715275980470652
+      },
+      {
+        "delta_median": -2.8485103845596313,
+        "ks_statistic": 0.8752295800041895,
+        "psi_hiroshima_bins": 10.941705550950509,
+        "rain_field": "api_k090_step30m_120h",
+        "summary": "last",
+        "wasserstein": 2.631169380969813
+      },
+      {
+        "delta_median": -2.7477476596832275,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 13.872144076435657,
+        "rain_field": "rain_6h_mm",
+        "summary": "min",
+        "wasserstein": 2.513853767280257
+      },
+      {
+        "delta_median": -2.6430823802948,
+        "ks_statistic": 0.8752955082742316,
+        "psi_hiroshima_bins": 10.182486501896811,
+        "rain_field": "api_k090_step30m_120h",
+        "summary": "max",
+        "wasserstein": 2.4943288740695664
+      },
+      {
+        "delta_median": -2.3912691726515605,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 12.641738235066075,
+        "rain_field": "rain_120h_mm",
+        "summary": "mean",
+        "wasserstein": 2.4154576157362433
+      },
+      {
+        "delta_median": -2.427816081047058,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 12.629422078163289,
+        "rain_field": "rain_120h_mm",
+        "summary": "p90",
+        "wasserstein": 2.385188330831086
+      },
+      {
+        "delta_median": -2.302669405937195,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 13.08659840908546,
+        "rain_field": "rain_72h_mm",
+        "summary": "max",
+        "wasserstein": 2.3311649829335344
+      },
+      {
+        "delta_median": -2.302669405937195,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 13.08659840908546,
+        "rain_field": "rain_72h_mm",
+        "summary": "last",
+        "wasserstein": 2.3311649829335344
+      },
+      {
+        "delta_median": 2.153565906167189,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 12.461138990792024,
+        "rain_field": "rain_12h_mm",
+        "summary": "std",
+        "wasserstein": 2.0896475245766797
+      },
+      {
+        "delta_median": -1.9983804821968079,
+        "ks_statistic": 1.0,
+        "psi_hiroshima_bins": 13.005400507861616,
+        "rain_field": "rain_120h_mm",
+        "summary": "last",
+        "wasserstein": 2.040756249030544
+      }
+    ],
+    "top_temporal_profile_fields_by_rmse": [
+      {
+        "profile_correlation": 0.19648449702082568,
+        "profile_mae": 3.79259672837626,
+        "profile_max_abs_difference": 8.080307993515838,
+        "profile_rmse": 4.724312916988833,
+        "rain_field": "rain_12h_mm"
+      },
+      {
+        "profile_correlation": 0.5132420213131013,
+        "profile_mae": 3.203051899009286,
+        "profile_max_abs_difference": 5.8081633849503795,
+        "profile_rmse": 3.798658755615572,
+        "rain_field": "rain_6h_mm"
+      },
+      {
+        "profile_correlation": 0.7379598085821263,
+        "profile_mae": 3.6784165385568697,
+        "profile_max_abs_difference": 4.503732665051401,
+        "profile_rmse": 3.742604713631689,
+        "rain_field": "rain_72h_mm"
+      },
+      {
+        "profile_correlation": 0.3376481282039215,
+        "profile_mae": 2.415457615736243,
+        "profile_max_abs_difference": 3.4934809420876904,
+        "profile_rmse": 2.5153427217039472,
+        "rain_field": "rain_120h_mm"
+      },
+      {
+        "profile_correlation": -0.11445454218895038,
+        "profile_mae": 1.9759453593540683,
+        "profile_max_abs_difference": 5.44164774763604,
+        "profile_rmse": 2.370321393149149,
+        "rain_field": "rain_24h_mm"
+      },
+      {
+        "profile_correlation": 0.5333228726125484,
+        "profile_mae": 1.7316002728784496,
+        "profile_max_abs_difference": 3.128156436679677,
+        "profile_rmse": 2.010097978300773,
+        "rain_field": "rain_3h_mm"
+      },
+      {
+        "profile_correlation": 0.8107795234466365,
+        "profile_mae": 1.8946038630319715,
+        "profile_max_abs_difference": 2.6136819837161585,
+        "profile_rmse": 1.946328827340544,
+        "rain_field": "rain_48h_mm"
+      },
+      {
+        "profile_correlation": 0.7732649443592354,
+        "profile_mae": 1.5160824516020235,
+        "profile_max_abs_difference": 2.6333835775912973,
+        "profile_rmse": 1.639541216662852,
+        "rain_field": "api_k090_step30m_120h"
+      },
+      {
+        "profile_correlation": 0.5647313129553724,
+        "profile_mae": 0.8963777003878973,
+        "profile_max_abs_difference": 1.7426510317900972,
+        "profile_rmse": 1.0373458578534172,
+        "rain_field": "rain_1h_mm"
+      },
+      {
+        "profile_correlation": 0.599523655099273,
+        "profile_mae": 0.7769332432500858,
+        "profile_max_abs_difference": 1.6560842515515466,
+        "profile_rmse": 0.8889201705854206,
+        "rain_field": "rain_30m_mm"
+      }
+    ]
+  },
+  "relative_signal_preservation": {
+    "combined": {
+      "cosine_similarity": 0.06547105761853764,
+      "median_sign_agreement": 0.5633802816901409,
+      "n_features": 101,
+      "pearson_p": 0.5411493404258114,
+      "pearson_r": 0.061512364469235074,
+      "spearman_p": 0.1498133076368397,
+      "spearman_rho": 0.14434943818417859
+    },
+    "interpretation": "inventory-positive minus mean matched-control contrast; descriptive only, controls are non-inventory controls",
+    "rain_temporal_mean": {
+      "cosine_similarity": NaN,
+      "median_sign_agreement": NaN,
+      "n_features": 10,
+      "pearson_p": NaN,
+      "pearson_r": NaN,
+      "spearman_p": NaN,
+      "spearman_rho": NaN
+    },
+    "static": {
+      "cosine_similarity": 0.06547105761853764,
+      "median_sign_agreement": 0.5633802816901409,
+      "n_features": 91,
+      "pearson_p": 0.5652937282564483,
+      "pearson_r": 0.0610638479385274,
+      "spearman_p": 0.19098197432360944,
+      "spearman_rho": 0.13833428777780435
+    }
+  },
+  "sample_counts": {
+    "hiroshima_matched_samples": 15168,
+    "hiroshima_matched_sets": 5056,
+    "kyushu_matched_samples": 5076,
+    "kyushu_matched_sets": 1692
+  },
+  "scientific_guardrail": "126 characterizes observed domain shift and relative-signal preservation. It does not claim causal explanation and does not modify 119/120B/121/123/124D/125.",
+  "static_shift": {
+    "feature_count": 91,
+    "max_wasserstein": 14.27568114723597,
+    "median_ks_statistic": 0.11951953721159891,
+    "median_psi": 0.16063268411034815,
+    "median_wasserstein": 0.2507586339197689,
+    "q90_wasserstein": 1.0734256277401508,
+    "top15_by_wasserstein": [
+      {
+        "delta_median": 0.0,
+        "feature": "river_length_m",
+        "ks_statistic": 0.07144816510558505,
+        "psi_hiroshima_bins": 0.023897695305518274,
+        "wasserstein": 14.27568114723597
+      },
+      {
+        "delta_median": -0.018010731786489487,
+        "feature": "dem_aspect_sin_max",
+        "ks_statistic": 0.11951953721159891,
+        "psi_hiroshima_bins": 0.06792002425604202,
+        "wasserstein": 8.872133940590295
+      },
+      {
+        "delta_median": 0.00015390287444461137,
+        "feature": "dem_aspect_cos_min",
+        "ks_statistic": 0.04460133190691373,
+        "psi_hiroshima_bins": 0.020800131663784655,
+        "wasserstein": 3.852782581487449
+      },
+      {
+        "delta_median": 0.0,
+        "feature": "lc_builtup_ratio",
+        "ks_statistic": 0.1600083789687884,
+        "psi_hiroshima_bins": 0.24933215282795612,
+        "wasserstein": 1.7262731684239376
+      },
+      {
+        "delta_median": 1.6351677775382996,
+        "feature": "soil_cec_0_5cm",
+        "ks_statistic": 0.6598149582049057,
+        "psi_hiroshima_bins": 4.848471213575339,
+        "wasserstein": 1.7063273103311978
+      },
+      {
+        "delta_median": 1.2021251320838928,
+        "feature": "soil_cec_15_30cm",
+        "ks_statistic": 0.6211320522987301,
+        "psi_hiroshima_bins": 4.5926711793162,
+        "wasserstein": 1.356111619335286
+      },
+      {
+        "delta_median": -0.0004287647607270628,
+        "feature": "dem_aspect_sin_min",
+        "ks_statistic": 0.050360781937337284,
+        "psi_hiroshima_bins": 0.019388445893412955,
+        "wasserstein": 1.27233150579777
+      },
+      {
+        "delta_median": 1.078626275062561,
+        "feature": "coast_distance_to_centroid_m",
+        "ks_statistic": 0.9670014201853347,
+        "psi_hiroshima_bins": 11.685583677582173,
+        "wasserstein": 1.2721218824780118
+      },
+      {
+        "delta_median": 1.1442703604698181,
+        "feature": "soil_soc_0_5cm",
+        "ks_statistic": 0.6714861323079071,
+        "psi_hiroshima_bins": 5.723872983226017,
+        "wasserstein": 1.1356255761998002
+      },
+      {
+        "delta_median": 0.9973832070827484,
+        "feature": "soil_cec_5_15cm",
+        "ks_statistic": 0.5138835896898784,
+        "psi_hiroshima_bins": 2.7757963016786085,
+        "wasserstein": 1.0734256277401508
+      },
+      {
+        "delta_median": -1.0126659870147705,
+        "feature": "soil_bdod_5_15cm",
+        "ks_statistic": 0.5824798505750566,
+        "psi_hiroshima_bins": 4.312567455023729,
+        "wasserstein": 1.0712876927858401
+      },
+      {
+        "delta_median": 0.06332819908857346,
+        "feature": "hydro_upa_zonal_mean_log1p",
+        "ks_statistic": 0.05225867447706256,
+        "psi_hiroshima_bins": 0.01787218150323857,
+        "wasserstein": 1.0534516671414542
+      },
+      {
+        "delta_median": -0.9121653437614441,
+        "feature": "soil_bdod_15_30cm",
+        "ks_statistic": 0.564608925347378,
+        "psi_hiroshima_bins": 3.210791559196595,
+        "wasserstein": 0.9742517405365557
+      },
+      {
+        "delta_median": -0.849255234003067,
+        "feature": "soil_bdod_0_5cm",
+        "ks_statistic": 0.5092591034004648,
+        "psi_hiroshima_bins": 3.0343530950816735,
+        "wasserstein": 0.890437674570292
+      },
+      {
+        "delta_median": 0.7279761135578156,
+        "feature": "soil_clay_0_5cm",
+        "ks_statistic": 0.442376354101206,
+        "psi_hiroshima_bins": 1.315618885530192,
+        "wasserstein": 0.8457473855869971
+      }
+    ]
+  },
+  "status": "PASS_126_DOMAIN_SHIFT_CHARACTERIZATION_COMPLETE"
+}

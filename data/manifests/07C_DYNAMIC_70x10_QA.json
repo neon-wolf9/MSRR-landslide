@@ -1,0 +1,15 @@
+{
+  "dtype": "float32",
+  "dynamic_fields": 10,
+  "end_utc": "2018-07-06 11:00:00+00:00",
+  "finite": true,
+  "future_timesteps_read": 0,
+  "negative_count": 0,
+  "start_utc": "2018-07-05 00:30:00+00:00",
+  "tensor_shape": [
+    15168,
+    70,
+    10
+  ],
+  "timesteps": 70
+}

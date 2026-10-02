@@ -1,0 +1,6 @@
+outer_fold,outer_fold_id,pair_sets,samples,positives,controls,spatial_groups
+FOLD_1,0,1011,3033,1011,2022,98
+FOLD_2,1,1011,3033,1011,2022,98
+FOLD_3,2,1011,3033,1011,2022,101
+FOLD_4,3,1011,3033,1011,2022,102
+FOLD_5,4,1012,3036,1012,2024,101

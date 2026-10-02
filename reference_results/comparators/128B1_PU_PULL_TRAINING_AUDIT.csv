@@ -1,0 +1,6 @@
+outer_fold,epochs,best_epoch,selected_loss,pu_branch_trees,scaler_fit_rows,fusion_rule
+1,60,60,8.673958778381348,1000,9102,0.5*contrastive_score + 0.5*PU_BaggingDT_score
+2,60,60,8.678650856018066,1000,9102,0.5*contrastive_score + 0.5*PU_BaggingDT_score
+3,60,60,8.68050765991211,1000,9102,0.5*contrastive_score + 0.5*PU_BaggingDT_score
+4,60,60,8.680365562438965,1000,9099,0.5*contrastive_score + 0.5*PU_BaggingDT_score
+5,60,60,8.659632682800293,1000,9099,0.5*contrastive_score + 0.5*PU_BaggingDT_score

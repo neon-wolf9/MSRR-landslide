@@ -1,0 +1,2 @@
+backbone,delta_AUROC,delta_AUPRC,delta_StrictPair,delta_Edge,metric_wins_out_of_4
+XGBoost,0.07772147052741585,0.06255553955031001,0.09338061465721037,0.08658392434988171,4

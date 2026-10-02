@@ -1,0 +1,6 @@
+variable,feature_source,data_type,transformation,lower_rule,upper_rule,tolerance,missing_policy,whether_event_specific
+geology_compatibility,frozen geology class,categorical,parent mapping,same audited parent; plutonic/volcanic cross allowed only within IGNEOUS,same,exact/parent block,NA follows frozen class/missingness block,True
+matching_missingness_pattern_id,all active matching fields NA mask,categorical hash,SHA256 of NA mask,exact equality,exact equality,none,no imputation,False
+soil_completeness_block,18 SoilGrids fields,categorical,complete vs all-missing,exact equality,exact equality,none,partial soil missingness forbidden,False
+legal_edge,all matching covariates and centroids,multidimensional,frozen transforms,all hard calipers pass,all hard calipers pass,see feasibility table,pairwise compatible; no imputation,True
+positive adequacy,legal bipartite graph,graph feasibility,all-or-none max flow,selected in maximum subset with demand 2,selected in maximum subset with demand 2,control capacity 1,N/A,False

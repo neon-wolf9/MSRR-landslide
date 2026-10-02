@@ -1,0 +1,20 @@
+{
+  "GATE126B_DECISION": "STRONG_REPRESENTATION_BEYOND_OBJECTIVE",
+  "all_contrast_win_counts": {
+    "C1": 4,
+    "C2": 4,
+    "C3": 4,
+    "C4": 2,
+    "C5": 4,
+    "C6": 4
+  },
+  "msrr_pointwise_vs_raw_rank_wins": 4,
+  "pairdiff_beaten": 4,
+  "post_result_rescue": false,
+  "representation_pairwise_wins": 4,
+  "reviewer_comment_3_experiment_complete": true,
+  "reviewer_comment_4_experiment_complete": true,
+  "status": "PASS_126B_TASK_ALIGNED_BASELINES_COMPLETE",
+  "xgb_n_jobs": 1,
+  "xgboost_version": "3.2.0"
+}

@@ -1,0 +1,10 @@
+feature,native_resolution_m,method,neighborhood,edge_nodata_rule,unit
+elevation,10,Frozen DEM value,1x1,Formal DEM NoData remains NA,m
+slope,10,"Horn 3x3 gradient; atan(hypot(dzdx,dzdy)) in degrees",3x3,All nine DEM cells required; no crossing NoData,degree
+aspect_sin,10,Downslope east component=-dzdx/gradient,Horn 3x3,Flat gradient <=1e-12 is NA and explicitly counted,unitless
+aspect_cos,10,Downslope north component=-dzdy/gradient,Horn 3x3,Flat gradient <=1e-12 is NA and explicitly counted,unitless
+profile_curvature,10,-(r*p^2+2*s*p*q+t*q^2)/((p^2+q^2)*(1+p^2+q^2)^1.5),3x3 centered finite differences,All nine cells and nonflat gradient required,1/m
+plan_curvature,10,(r*q^2-2*s*p*q+t*p^2)/(p^2+q^2)^1.5,3x3 centered finite differences,All nine cells and nonflat gradient required,1/m
+TWI,10,"ln(a/tan(beta)); a=(D8 upstream cell count including self*100m2)/10m; beta=max(Horn slope,0.001rad); strict-steepest D8; no depression filling","D8 N,NE,E,SE,S,SW,W,NW with fixed tie order; Horn 3x3 beta",DEM NoData and stable water are barriers/NA; all nine land cells required for output,unitless_log_ratio
+roughness,10,3x3 maximum elevation minus minimum elevation,3x3,All nine DEM cells required; no crossing NoData,m
+stable_water_mask,10,Audited pre-event Landsat QA water_fraction >= 0.5; nearest-neighbor mapping from 30m,source pixel classification,Unknown water evidence is not silently classified as water and is separately counted,binary

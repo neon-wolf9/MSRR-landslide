@@ -1,0 +1,17 @@
+Component,Hiroshima 2018,Kyushu 2017,Purpose
+Positive evidence,AJG+GSI frozen positive evidence,GSI formal interpreted hit,defines event positives
+Initial control population,"31,324 unlabeled candidates","11,784 formal GSI non-hits",candidate universe
+Evidence exclusion,"P0 evidence-cleaning to 28,102; later corrected to 28,072",positives excluded; non-hits retained,avoid known evidence contamination
+One-ring / spatial guard,P1/P2 diagnostic only; final P0,no extra grid guard,sensitivity diagnostics
+Common support,"maximum all-or-none feasible 1:2 subset: 5,056/5,075","1,692/1,694",defines matched estimand
+Normalization,event-joint median/IQR; selected log1p,same event-specific fitting,scale fields
+Distance,weighted mean absolute robust-z group distance,same,rank legal edges
+Weights,"{'TERRAIN': 0.3, 'SOIL': 0.15, 'LANDCOVER_VEGETATION': 0.15, 'HYDRO_DISTANCE': 0.15, 'ACCESSIBILITY_DISTANCE': 0.05, 'ANTECEDENT_RAINFALL': 0.2}","{'TERRAIN': 0.3, 'SOIL': 0.15, 'LANDCOVER_VEGETATION': 0.15, 'HYDRO_DISTANCE': 0.15, 'ACCESSIBILITY_DISTANCE': 0.05, 'ANTECEDENT_RAINFALL': 0.2}",frozen group importance
+Calipers,"5°, 250 m, 0.20 NDVI, 20 km, rain z 0.50 each/0.35 mean",same,legal-edge feasibility
+Matching ratio,1:2,1:2,two controls per positive
+Optimization,all-or-none max flow then blockwise sparse minimum cost,same,maximize coverage then minimize cost
+Control reuse,forbidden; capacity 1,forbidden; capacity 1,independence of controls
+Tie handling,sorted IDs + epsilon + stable lexicographic rank,same,deterministic
+Adequate-control criterion,two legal controls simultaneously feasible under global capacity,same,common-support membership
+Unmatched positives,"19 retain positive label, excluded from matched benchmark","2 retain positive label, excluded",no relabeling
+Final matched sets,"5,056 sets; 10,112 repaired controls","1,692 sets; 3,384 controls",formal benchmark

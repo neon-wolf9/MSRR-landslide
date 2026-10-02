@@ -1,0 +1,21 @@
+{
+  "hashes": {
+    "ElasticNet-Logistic__MSRR": "1ef26035bebb922cbca2ba8325f5fcb03e88bd748ab8c81b56bea1fe8d769531",
+    "ElasticNet-Logistic__RAW": "50001a4591c7b9637524506dfb4c5f42c2ba237d78adf498d6eab54be2b265ce",
+    "HistGradientBoosting__MSRR": "084f6b659d4fd686998006bbef0dfde4a0bc124faae25783266a38f494f31c8e",
+    "HistGradientBoosting__RAW": "d63c1eadfb74fe18dad5bee7cbc5da8788346706a3a9d2e2c7cd2a0a84e5abc1",
+    "MLP__MSRR": "ce2b3e25ee97a9c73997735292886836272b641556ecebb7b290843e9f72c9d6",
+    "MLP__RAW": "f5b99dc2d1d83e5b2e84b1ba031210be94a22a4366f68dfba7026d751df2cb7e",
+    "XGBoost__MSRR": "4446c66eb92d077849d28ffd43244c05ae28f179fad50101eacc9d534ab86adf",
+    "XGBoost__RAW": "621bd7fa642b236760f8ef93f65dee233edfd0da6604eacac6c69a0fe526d180"
+  },
+  "new_backbone_kyushu_outcomes_used_for_fit_or_selection": false,
+  "new_backbones": [
+    "ElasticNet-Logistic",
+    "MLP",
+    "HistGradientBoosting"
+  ],
+  "prediction_rows_per_cell": 5076,
+  "status": "PASS_ALL_8_EXTERNAL_PREDICTION_VECTORS_FIXED",
+  "xgboost_source": "exact frozen 124D primary predictions"
+}

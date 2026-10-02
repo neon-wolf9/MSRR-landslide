@@ -1,0 +1,16 @@
+method,outer_fold,fit_test_unit_overlap,fit_test_pair_overlap,fit_test_group_overlap,validation_test_group_overlap,dynamic_sequence_overlap,pass
+PU-BaggingDT,1,0,0,0,0,0,True
+Spy-PU+BRF,1,0,0,0,0,0,True
+PU-pullbaggingDT,1,0,0,0,0,0,True
+PU-BaggingDT,2,0,0,0,0,0,True
+Spy-PU+BRF,2,0,0,0,0,0,True
+PU-pullbaggingDT,2,0,0,0,0,0,True
+PU-BaggingDT,3,0,0,0,0,0,True
+Spy-PU+BRF,3,0,0,0,0,0,True
+PU-pullbaggingDT,3,0,0,0,0,0,True
+PU-BaggingDT,4,0,0,0,0,0,True
+Spy-PU+BRF,4,0,0,0,0,0,True
+PU-pullbaggingDT,4,0,0,0,0,0,True
+PU-BaggingDT,5,0,0,0,0,0,True
+Spy-PU+BRF,5,0,0,0,0,0,True
+PU-pullbaggingDT,5,0,0,0,0,0,True

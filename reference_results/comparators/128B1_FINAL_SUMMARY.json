@@ -1,0 +1,15 @@
+{
+  "leakage": 0,
+  "methods_5fold_complete": {
+    "pu_baggingdt": true,
+    "pu_pullbaggingdt": true,
+    "spy_pu_brf": true
+  },
+  "msrr_retrained": false,
+  "next_step": "INTERPRET_128B1_RESULTS",
+  "oof_rows": 15168,
+  "oof_sets": 5056,
+  "smoke_config_used": false,
+  "status": "PASS_128B1_PUBLISHED_ALGORITHM_COMPARISON_5FOLD_COMPLETE",
+  "test_tuning": false
+}

@@ -1,0 +1,3 @@
+event,fold_protocol,formal_pair_sets,replay_pair_sets,run_a_run_b_exact,fold_exact
+HIROSHIMA_2018,FIXED_SEED_SPATIAL_GROUP_OPTIMIZER_SEEDS_7_11_21,5056,5056,True,True
+KYUSHU_2017,NO_EVENT_INTERNAL_FOLD_IN_FORMAL_EXTERNAL_BENCHMARK,1692,1692,,True
