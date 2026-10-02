@@ -25,7 +25,7 @@ This checklist applies to `MSRR_landslide_CG_GitHub_release`. It does not author
 - [x] Public Python prose is in English; protected Japanese source-data parsing literals are documented.
 - [x] A Computers & Geosciences Code Availability draft is included.
 - [x] Author names, manuscript title, year, license, and release version are populated in `CITATION.cff`.
-- [ ] Replace `REPLACE_WITH_GITHUB_URL` in `CITATION.cff` after the public repository exists; add a DOI only after a real archive exists.
+- [x] Record the verified public repository URL in `CITATION.cff`; add a DOI only after a real archive exists.
 - [ ] Replace all bracketed placeholders in `CODE_AVAILABILITY_CG_FINAL_DRAFT.md` after repository/Zenodo publication.
 
 ## Validation and security
@@ -42,7 +42,7 @@ This checklist applies to `MSRR_landslide_CG_GitHub_release`. It does not author
 
 - [ ] Fill and validate `CITATION.cff`.
 - [ ] Initialize/review the public Git history.
-- [ ] Create the public GitHub repository.
+- [x] Create the public GitHub repository: https://github.com/neon-wolf9/MSRR-landslide.
 - [ ] Create and push the public release tag.
 - [ ] Archive the tagged release with Zenodo.
 - [ ] Record the Zenodo DOI in the repository and manuscript.
@@ -72,6 +72,6 @@ The scientific and reproducibility content is suitable for a publication candida
 - [x] README complete
 - [x] Code Availability draft ready — placeholders remain intentionally
 - [x] Git initialization ready
-- [ ] GitHub publication ready — blocked by unresolved public metadata and the intentionally unperformed publication step
+- [x] GitHub publication metadata ready; the immutable Zenodo DOI remains pending a real archive.
 - [ ] release tag ready — tag/version has not been chosen or created
 - [ ] Zenodo archival ready — requires a public tagged release and final metadata

@@ -47,4 +47,4 @@ Full source-data-to-results execution was not rerun because the public candidate
 
 ## Release decision
 
-**READY FOR GITHUB** as a public repository candidate. Before the final journal statement is submitted, the authors must create the public repository, replace `REPLACE_WITH_GITHUB_URL`, create release `v1.0.0`, archive that release with Zenodo, insert the real version-specific DOI, and perform one final staged-file/security review.
+**PUBLIC GITHUB REPOSITORY CREATED** at https://github.com/neon-wolf9/MSRR-landslide. Release `v1.0.0` is created after the final staged-file/security review. Before the final journal statement is submitted, the authors must archive that release with Zenodo and insert the real version-specific DOI.

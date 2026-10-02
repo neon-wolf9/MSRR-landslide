@@ -126,7 +126,7 @@ A source-data-to-results rerun is not claimed without the excluded third-party a
 
 ## Citation
 
-Citation metadata are provided in `CITATION.cff`. Replace `REPLACE_WITH_GITHUB_URL` after the public repository exists. Add the immutable Zenodo DOI only after release archival; no DOI is fabricated in this candidate.
+Citation metadata are provided in `CITATION.cff`, including the verified public repository URL: https://github.com/neon-wolf9/MSRR-landslide. Add the immutable Zenodo DOI only after release archival; no DOI is fabricated in this repository.
 
 ## License
 

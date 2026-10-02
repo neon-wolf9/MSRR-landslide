@@ -10,7 +10,7 @@ authors:
   - family-names: "Li"
     given-names: "Huan"
 version: "1.0.0"
-repository-code: "REPLACE_WITH_GITHUB_URL"
+repository-code: "https://github.com/neon-wolf9/MSRR-landslide"
 license: MIT
 preferred-citation:
   type: article
