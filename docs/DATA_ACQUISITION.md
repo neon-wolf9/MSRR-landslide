@@ -4,6 +4,8 @@
 
 This repository does not redistribute third-party EO/GIS source data or source inventories. Acquisition is performed independently from the original providers and is subject to their terms. `docs/DATA_SOURCES.md` is the authoritative source registry assembled from existing project records.
 
+The frozen **derived** study inputs and two historical prediction hand-offs are separately published at [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084). Download `MSRR_CG_approved_data_candidate.zip` and extract it at the code repository root, preserving `data/`, `external/`, `experiments/`, and `metadata/` paths. From that root, verify the eleven files against `metadata/SHA256SUMS.txt` using the command in the README, then run `python scripts/01_verify_inputs.py --full` for its seven-file screen. This deposit does not replace the independently acquired raw products needed for source-to-benchmark reconstruction.
+
 ## Acquisition order
 
 1. Review `THIRD_PARTY_NOTICES.md` and `docs/THIRD_PARTY_DATA.md`.

@@ -18,13 +18,13 @@ The exact validated public package versions are in `requirements.txt`. Platform-
 
 ## 3. Data preparation
 
-Acquire the excluded products using `docs/DATA_ACQUISITION.md` and validate them against `docs/DATA_SOURCES.md`, `data/manifests/`, and `data/schemas/`. Then run:
+First download `MSRR_CG_approved_data_candidate.zip` from [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), extract it at the repository root without changing paths, and verify its `metadata/SHA256SUMS.txt` as shown in the README. The archive supplies eleven frozen derived inputs/hand-offs at their original `data/`, `external/`, and `experiments/` paths; raw third-party products are not included. For source-to-benchmark reconstruction, acquire those raw products using `docs/DATA_ACQUISITION.md` and validate against `docs/DATA_SOURCES.md`, `data/manifests/`, and `data/schemas/`. Then run:
 
 ```bash
 python scripts/01_verify_inputs.py --full
 ```
 
-This command checks only seven model-ready files. It does **not** certify the original 20A/120B loader, ancillary schemas/pair tables, missing BASE-00 modules, or 120B output directory consumed by 121/124D. The actual unresolved dependency closure is recorded in `REPRODUCIBILITY_GAP_ANALYSIS.md`; the present public package cannot yet perform a main-result rerun.
+This command checks only seven model-ready files; it does **not** certify every formal loader, ancillary schema or downstream result dependency. `REPRODUCIBILITY_GAP_ANALYSIS.md` records the earlier pre-deposit audit. This link update has not rerun the formal experiments and does not independently certify every full-workflow prerequisite.
 
 The underlying data-preparation lineage includes positive-evidence freezing, hard-control eligibility construction, reconciliation, terrain/static feature processing, rainfall assembly, and event-specific dataset freezing. Exact script roles are described in `docs/BENCHMARK_PROTOCOL.md`.
 

@@ -14,7 +14,7 @@ The development benchmark is the July 2018 Hiroshima event (5,056 complete match
 
 Release status: `main` contains restored frozen configurations and an external preprocessing script that are absent from the existing `v1.0.0` tag. This branch is a pre-release candidate; no subsequent version is published. Use a verified `main` commit when assessing the complete public workflow, and do not cite `v1.0.0` as containing those restored files.
 
-Local assembly note (2026-10-21): this directory is an **unpublished** v1.0.1 review candidate, not the current GitHub `main`. It restores the original loader and benchmark-replay source dependencies, including the 126A audit authority and four historical matching/split modules; their only source edits replace the original personal project-root constant with a relative root. It also contains one author-generated pair-position array and non-sensitive exact-path metadata. Six model-ready derived inputs, two additional source-derived pair files, and two row-level scientific hand-offs remain excluded pending file-level rights review. `FINAL_REPRODUCIBILITY_GATE.md` records the data boundary; the public-baseline reports retain their original scope.
+The reviewed code package is on `main`. The real-data inputs and historical prediction hand-offs are distributed separately in the [published research-data record](https://doi.org/10.5281/zenodo.23533084), not in Git. The earlier packaging assessments in `FINAL_REPRODUCIBILITY_GATE.md` describe the pre-deposit state; they are not a statement that the Zenodo files are still unavailable. No v1.0.1 code tag or Release has been created.
 
 The repository contains the real manuscript code and publication reference materials for:
 
@@ -84,13 +84,34 @@ python -m pytest -q -p no:cacheprovider
 
 The synthetic example imports the canonical manuscript implementation and verifies an `N x 3 x 792` input to `N x 3 x 2446` output. It is not a reproduction of the landslide experiments.
 
+## Research Data
+
+The published dataset is [MSRR landslide benchmark data: Hiroshima 2018 and Kyushu 2017](https://doi.org/10.5281/zenodo.23533084) (Zenodo record [23533084](https://zenodo.org/records/23533084)). Download **`MSRR_CG_approved_data_candidate.zip`** from that record. Zenodo lists one 21.6 MB ZIP with MD5 `0060b0eb325d36add38e5f0bf811b503`; this is the published file, not a GitHub code release.
+
+From the root of this repository, extract the ZIP without changing its internal paths (replace the ZIP path below with its download location):
+
+```bash
+python -m zipfile -e /path/to/MSRR_CG_approved_data_candidate.zip .
+```
+
+The archive places Hiroshima files under `data/07_FINAL_REPAIRED_DATASET_V2/`, Kyushu files under `external/kyushu_2017_asakura_toho/99_frozen_dataset/`, the 120B-to-121 hand-off under `experiments/MSRR_121_PAIRED_BOOTSTRAP/`, and the 124D prediction hand-off under `external/kyushu_2017_asakura_toho/100_external_validation/MSRR_KYUSHU2017_EXTERNAL_V1D/`. Its `metadata/` directory contains the data dictionary, provenance, file inventory, and `SHA256SUMS.txt`. These are 11 frozen study files plus archive metadata; raw third-party EO/GIS products are not included.
+
+Verify the extracted study-file bytes against the included SHA-256 list from the repository root:
+
+```bash
+python -c "import hashlib,pathlib; rows=[s.split('  ',1) for s in pathlib.Path('metadata/SHA256SUMS.txt').read_text(encoding='utf-8').splitlines()]; bad=[p for h,p in rows if hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()!=h.lower()]; assert len(rows)==11 and not bad, bad; print('11/11 SHA-256 OK')"
+python scripts/01_verify_inputs.py --full
+```
+
+The existing input checker covers seven model-ready paths, not every downstream dependency. Original research scripts use the preserved repository-relative locations; follow `docs/REPRODUCIBILITY.md` for their entry points and prerequisites. Extracting or hash-checking the archive does **not** rerun training or reproduce reported metrics. The code is MIT-licensed; deposited data retain the source-specific terms documented inside the ZIP.
+
 ## Full reproduction
 
-Full reproduction requires the frozen derived scientific inputs at their documented relative paths, or a verified reconstruction from independently acquired third-party EO/GIS products. **This public code package is not a runnable main-result reproduction bundle.** It contains the original loader code and byte-identical 120B-to-121/123/124D/125 output hand-off, but excludes rights-pending real runtime inputs and the 124D-to-125 prediction hand-off. The seven-file input checker is not the full loader gate. See `WORKFLOW_HANDOFF_AUDIT.md` and `REVIEWER_REPRODUCTION_GUIDE.md` before attempting a formal run.
+Full reproduction requires the separately deposited frozen derived inputs at their documented relative paths, plus any workflow-specific upstream products or intermediates identified in the original guides. First restore the [Zenodo data ZIP](https://doi.org/10.5281/zenodo.23533084) as described above. The seven-file input checker is not the full loader gate, and this README does not claim that every formal workflow has been rerun from the public package. See `WORKFLOW_HANDOFF_AUDIT.md` and `REVIEWER_REPRODUCTION_GUIDE.md` for the original dependency audit and `docs/REPRODUCIBILITY.md` for the script order.
 
 1. Read `docs/DATA_ACQUISITION.md`, `docs/DATA_LAYOUT.md`, and `docs/THIRD_PARTY_DATA.md`.
-2. Restore or reconstruct the Hiroshima and Kyushu inputs using the manifests, schemas, and frozen source versions.
-3. Use `python scripts/01_verify_inputs.py --full` as a **seven-file screen only**, then audit the additional exact dependencies in `REPRODUCIBILITY_GAP_ANALYSIS.md`; a zero exit from that checker is not a full-workflow pass.
+2. Restore the deposited Hiroshima and Kyushu inputs from Zenodo at their original relative paths; use the manifests, schemas, and frozen source versions when independently reconstructing upstream inputs.
+3. Use `python scripts/01_verify_inputs.py --full` as a **seven-file screen only**, then check the additional exact dependencies listed in `REPRODUCIBILITY_GAP_ANALYSIS.md`; a zero exit from that checker is not a full-workflow pass.
 4. Audit matching and deterministic benchmark replay:
 
    ```bash
@@ -112,7 +133,7 @@ Full reproduction requires the frozen derived scientific inputs at their documen
 
 7. Follow the ordered evidence chain in `docs/REPRODUCIBILITY.md` for ablation, placebo, comparators, sensitivity analyses, Kyushu evaluation, domain shift, and spatial analysis.
 
-Missing non-bundled frozen inputs are expected to stop full-rerun scripts. Their absence does not prove that sharing them is prohibited. Do not substitute current products for frozen event-specific sources without a documented equivalence audit.
+Other missing workflow-specific inputs can still stop a full rerun. Their absence does not prove that sharing them is prohibited. Do not substitute current products for frozen event-specific sources without a documented equivalence audit.
 
 ## Expected outputs
 
@@ -124,17 +145,17 @@ The principal Hiroshima XGBoost execution is the frozen 120B result. The later d
 
 Third-party EO/GIS source data and source inventories are not redistributed. Provider-controlled or authenticated products include AJG and GSI event evidence, GSI elevation, Copernicus DEM GLO-30, SoilGrids 2.0, Landsat 8 Collection 2 Level-2, CGLS-LC100 Collection 3, historical OpenStreetMap/Geofabrik extracts, J-FlwDir v1.4, GSJ Seamless Geological Map V2, and GPM IMERG Final Run V07B.
 
-Product identifiers, known versions or event cutoffs, official access records already present in the project, expected relative paths, and preprocessing cautions are documented in `docs/DATA_ACQUISITION.md` and `docs/DATA_SOURCES.md`. `DATA_AVAILABILITY.md` classifies the seven absent full-workflow inputs as derived products and identifies specific small-file deposit candidates. Their release requires an author-led, source-specific rights and provenance decision; the public package cannot yet reproduce the reported event results from source data.
+Product identifiers, known versions or event cutoffs, expected relative paths, and preprocessing cautions are documented in `docs/DATA_ACQUISITION.md` and `docs/DATA_SOURCES.md`. The eleven published derived inputs and historical hand-offs are in the [Zenodo data record](https://doi.org/10.5281/zenodo.23533084), whose metadata document source-specific rights. `DATA_AVAILABILITY.md` retains the earlier GitHub-only packaging audit and points to the superseding deposit. Raw source-product acquisition remains separate.
 
 ## Reproducibility
 
 Deterministic components, seeds, frozen folds, benchmark replay identities, hashes, and reference outputs are preserved. The redistribution-safe suite verifies the canonical transformation, matched-set metrics, matching integrity, fold integrity, and reference files. Exact benchmark replay evidence confirms 5,056 Hiroshima and 1,692 Kyushu complete matched sets with no control reuse.
 
-A source-data-to-results rerun is not claimed without the excluded third-party and derived inputs. See `VALIDATION_REPORT.md` and `docs/REPRODUCIBILITY.md` for the tested boundary and known limitations.
+A new source-data-to-results rerun is not claimed by this data-link update. See `VALIDATION_REPORT.md` and `docs/REPRODUCIBILITY.md` for the tested boundary and known limitations.
 
 ## Citation
 
-Citation metadata are provided in `CITATION.cff`, including the verified public repository URL: https://github.com/neon-wolf9/MSRR-landslide. Add the immutable Zenodo DOI only after release archival; no DOI is fabricated in this repository.
+Software citation metadata are in `CITATION.cff`, including the public repository URL: https://github.com/neon-wolf9/MSRR-landslide. Cite the **data** separately using [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084). This data DOI is not a DOI for an unpublished v1.0.1 code Release.
 
 ## License
 
