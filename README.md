@@ -12,6 +12,8 @@ The development benchmark is the July 2018 Hiroshima event (5,056 complete match
 
 ## Repository scope
 
+Release status: `main` contains restored frozen configurations and an external preprocessing script that are absent from the existing `v1.0.0` tag. This branch is a pre-release candidate; no subsequent version is published. Use a verified `main` commit when assessing the complete public workflow, and do not cite `v1.0.0` as containing those restored files.
+
 The repository contains the real manuscript code and publication reference materials for:
 
 - Hiroshima and Kyushu benchmark construction and deterministic replay;

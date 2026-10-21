@@ -1,5 +1,7 @@
 # Public release audit
 
+Historical record only: this report describes the 2026-10-02 package and its then-current local tests. It is not an audit of the later restored files on `main` or a current independent GitHub-clone validation. The existing `v1.0.0` tag is incomplete relative to `main` and remains unchanged.
+
 Audit date: 2026-10-02  
 Source package: `MSRR_IJAEOG_Reproducibility_Package`  
 Public candidate: `MSRR_landslide_CG_GitHub_release`
@@ -47,4 +49,4 @@ Full source-data-to-results execution was not rerun because the public candidate
 
 ## Release decision
 
-**PUBLIC GITHUB REPOSITORY CREATED** at https://github.com/neon-wolf9/MSRR-landslide. Release `v1.0.0` is created after the final staged-file/security review. Before the final journal statement is submitted, the authors must archive that release with Zenodo and insert the real version-specific DOI.
+**PUBLIC GITHUB REPOSITORY CREATED** at https://github.com/neon-wolf9/MSRR-landslide. The existing `v1.0.0` release predates restored files on `main`; it must not be cited as containing the complete current workflow. Zenodo archival is optional, and no DOI should be asserted before an actual archive is verified. A later release requires independent acceptance and explicit author approval.

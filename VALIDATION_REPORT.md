@@ -1,5 +1,7 @@
 # Validation Report
 
+Historical validation notice: the results below were recorded on 2026-10-01/02 against the then-current local package. They do not establish that the later restored files on GitHub `main` pass an independent fresh-clone test. The existing `v1.0.0` tag is incomplete relative to `main`; no later release is asserted here.
+
 ## Public-candidate revalidation — 2026-10-02
 
 After copying the validated package into `MSRR_landslide_CG_GitHub_release`, release-layer documentation and metadata were added and the redistribution-safe suite was rerun in the recorded Python 3.10.20 environment:

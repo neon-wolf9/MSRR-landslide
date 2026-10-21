@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite this versioned software release; cite the associated manuscript when bibliographic details are available."
+message: "For the complete restored workflow, cite the repository and the exact main commit used; the existing v1.0.0 release predates restored files. Cite the associated manuscript when bibliographic details are available."
 title: "Matched-Set Relative Representation (MSRR) for rainfall-induced landslide discrimination"
 type: software
 authors:
@@ -9,6 +9,5 @@ authors:
     given-names: "Xinyue"
   - family-names: "Li"
     given-names: "Huan"
-version: "1.0.0"
 repository-code: "https://github.com/neon-wolf9/MSRR-landslide"
 license: MIT
