@@ -26,7 +26,7 @@ checkpoints/
 
 # Independently acquired third-party sources and data must never be committed.
 third_party/PU-pullbaggingDT/
-external/
+/external/
 data/derived/*
 data/raw/
 data/interim/
@@ -45,4 +45,4 @@ data/processed/
 *.nc4
 
 # Locally regenerated experiment work products are not publication references.
-experiments/
+/experiments/

@@ -1,0 +1,97 @@
+{
+  "benchmark": "15168 frozen matched rows; controls are U, not verified negatives",
+  "formal_configuration": {
+    "PU-BaggingDT": {
+      "class_weight": "balanced",
+      "max_depth": null,
+      "max_features": null,
+      "min_samples_leaf": 1,
+      "n_estimators": 1000,
+      "u_fraction": 0.7
+    },
+    "PU-pullbaggingDT": {
+      "checkpoint_policy": "final_epoch_single_deterministic_encoder_as_frozen_by_128B0_adaptation",
+      "embedding_dim": 50,
+      "epochs": 60,
+      "fusion": "equal arithmetic mean of contrastive and PU-BaggingDT scores",
+      "input_dim": 792,
+      "learning_rate": 0.0001,
+      "optimizer": "Adam",
+      "pu_trees": 1000
+    },
+    "Spy-PU+BRF": {
+      "adapter_expresses_full_brf_search": true,
+      "brf_search_space": {
+        "max_depth": [
+          12,
+          null
+        ],
+        "max_features": [
+          "sqrt"
+        ],
+        "min_samples_leaf": [
+          1,
+          5,
+          20
+        ],
+        "n_estimators": [
+          300,
+          500
+        ],
+        "replacement": [
+          true,
+          false
+        ]
+      },
+      "spy_fraction": 0.15,
+      "stage1_n_estimators": 300,
+      "threshold_rules": [
+        "spy_min",
+        "spy_q05",
+        "spy_q10"
+      ]
+    },
+    "authorities": {
+      "a3_bag": "${PROJECT_ROOT}\\experiments\\MSRR_128A3_BENCHMARK_ALIGNED_PU_PROTOCOL\\128A3_PU_BAGGING_SPEC.json",
+      "a3_pull": "${PROJECT_ROOT}\\experiments\\MSRR_128A3_BENCHMARK_ALIGNED_PU_PROTOCOL\\128A3_PU_PULL_SPEC.json",
+      "a3_spy": "${PROJECT_ROOT}\\experiments\\MSRR_128A3_BENCHMARK_ALIGNED_PU_PROTOCOL\\128A3_SPY_PU_BRF_SPEC.json",
+      "b0_bag": "${PROJECT_ROOT}\\experiments\\MSRR_128B0_BASELINE_ADAPTER_SMOKE_TEST\\128B0_PU_BAGGING_IMPLEMENTATION.json",
+      "b0_pull": "${PROJECT_ROOT}\\experiments\\MSRR_128B0_BASELINE_ADAPTER_SMOKE_TEST\\128B0_PU_PULL_IMPLEMENTATION.json",
+      "b0_ready": "${PROJECT_ROOT}\\experiments\\MSRR_128B0_BASELINE_ADAPTER_SMOKE_TEST\\128B0_READY_FOR_128B1.json",
+      "b0_spy": "${PROJECT_ROOT}\\experiments\\MSRR_128B0_BASELINE_ADAPTER_SMOKE_TEST\\128B0_SPY_PU_BRF_IMPLEMENTATION.json",
+      "msrr_oof": "${PROJECT_ROOT}\\experiments\\MSRR_121_PAIRED_BOOTSTRAP\\120B_RECOVERED_ROW_LEVEL_OOF.parquet",
+      "spy_formal": "${PROJECT_ROOT}\\scripts\\msrr128_baselines\\spy_pu_brf_formal_config.json"
+    },
+    "blocking_reasons": [],
+    "pass": true,
+    "selection": {
+      "score": "mean(AUROC,AUPRC,StrictPair,Edge)",
+      "tie_break": [
+        "StrictPair",
+        "Edge",
+        "AUPRC",
+        "AUROC",
+        "earlier config index"
+      ]
+    },
+    "smoke_parameters_used": false,
+    "status": "PASS"
+  },
+  "methods": [
+    "pu_baggingdt",
+    "spy_pu_brf",
+    "pu_pullbaggingdt"
+  ],
+  "msrr_retrained": false,
+  "outer_folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "raw_dim": 792,
+  "resume": false,
+  "seed": 7,
+  "test_tuning": false
+}

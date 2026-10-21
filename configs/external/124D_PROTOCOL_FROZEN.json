@@ -1,0 +1,58 @@
+{
+  "authority_files": {
+    "120B": {
+      "path": "${PROJECT_ROOT}\\scripts\\120B_RUN_MSRR_CROSS_BACKBONE_5FOLD_NO_LIGHTGBM_ONE_SHOT.py",
+      "sha256": "cb5a7a785b0449565542911d50a0fb038a85f358974af4d96c86411054422ac3"
+    },
+    "20A_data_schema": {
+      "path": "${PROJECT_ROOT}\\scripts\\20A_RUN_TABULAR_BASELINES_REPAIRED_V2.py",
+      "sha256": "dee8f109af08298ac465e68be9ad64cc329d838e513b7e8a573754a74211b342"
+    },
+    "23D_preprocessing": {
+      "path": "${PROJECT_ROOT}\\scripts\\23D_RUN_NEURAL_BASELINES_REPAIRED_V2.py",
+      "sha256": "da3de09ba965415fc909c77137bea946f163ec5ce61da7a2d7b6621e551c3106"
+    },
+    "26_static92_bridge": {
+      "path": "${PROJECT_ROOT}\\scripts\\26_RUN_SEHC_NET_M_V1_FORMAL.py",
+      "sha256": "a5a92bcf35d8972920c4a59addfe372c1ada758c2e7f60aee4ba3135f15de4a1"
+    }
+  },
+  "bootstrap_B": 10000,
+  "bootstrap_seed": 20260830,
+  "bootstrap_unit": "matched set; P+C1+C2 kept together; identical draw for RAW and MSRR",
+  "deployment_preprocessing_rule": "Fit the unchanged formal 23D median/IQR/log1p/category preprocessing once on ALL Hiroshima development samples after internal model selection, then apply those exact Hiroshima-fitted parameters unchanged to Kyushu raw inputs.",
+  "deployment_xgb_config_rule": "Separately for RAW and MSRR, choose D4/D6/D8 by the highest mean validation_score across the five existing Hiroshima 120B validation folds. Kyushu is not consulted.",
+  "development_event": "Hiroshima_2018",
+  "experiment": "124D_KYUSHU2017_FROZEN_EXTERNAL_VALIDATION",
+  "external_dataset_root": "${PROJECT_ROOT}\\external\\kyushu_2017_asakura_toho\\99_frozen_dataset",
+  "external_dataset_scope": "DATA_ONLY_NO_MODEL_NO_PREDICTION",
+  "external_dataset_status": "PASS_KYUSHU_EXTERNAL_DATASET_CONSTRUCTION_COMPLETE_AND_FROZEN",
+  "external_event": "Kyushu_2017_Asakura_Toho",
+  "external_label_rule": "Kyushu outcome/sample-role metadata is parsed only after all RAW/MSRR external scores are fixed.",
+  "external_pair_context_rule": "pair_set_id groups the frozen P+2HC set for MSRR context; within-set row ordering before prediction is label-blind and irrelevant because the set mean is permutation invariant.",
+  "final_xgb_seed": 607,
+  "gate": {
+    "CROSS_EVENT_TRANSFER_SUPPORT": "MSRR>RAW on all four external metrics, but at least one paired-bootstrap CI includes zero",
+    "PARTIAL_EXTERNAL_SUPPORT": "MSRR>RAW on at least three of four external metrics",
+    "STRONG_CROSS_EVENT_TRANSFER": "MSRR>RAW on all four external metrics AND all four paired matched-set bootstrap 95% CI lower bounds >0",
+    "otherwise": "EXTERNAL_TRANSFER_NOT_SUPPORTED"
+  },
+  "kyushu_used_for_feature_selection": false,
+  "kyushu_used_for_hyperparameter_selection": false,
+  "kyushu_used_for_method_rescue": false,
+  "kyushu_used_for_model_selection": false,
+  "kyushu_used_for_preprocessor_fit": false,
+  "kyushu_used_for_threshold_selection": false,
+  "msrr_dim": 2446,
+  "post_external_result_rescue_allowed": false,
+  "primary_downstream_learner": "XGBoost",
+  "raw_dim": 792,
+  "representations": [
+    "RAW",
+    "MSRR"
+  ],
+  "seed": 7,
+  "status": "FROZEN_BEFORE_EXTERNAL_PREDICTION_AND_METRICS",
+  "technical_predecessor": "124 V1 stopped before any external prediction because fold-specific preprocessing was detected; 124B stopped before any external prediction because duplicate-format frozen input exports were conservatively treated as ambiguous; 124D safely resolves only contract-equivalent duplicates.",
+  "xgb_jobs": 8
+}

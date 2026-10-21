@@ -1,0 +1,80 @@
+{
+  "expected_dimensions": {
+    "GLOBAL_CENTERED": 2446,
+    "RAW": 792,
+    "SHUFFLED_CONTEXT": 2446,
+    "TRUE_MSRR": 2446
+  },
+  "experiment": "123_MATCHED_CONTEXT_PLACEBO",
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "forbidden_metadata_used_as_predictive_features": false,
+  "gate": {
+    "MATCHED_CONTEXT_SUPPORT": "TRUE_MSRR > each placebo on >=3/4 pooled OOF metrics but strong gate not fully met",
+    "STRONG_MATCHED_CONTEXT_SUPPORT": "TRUE_MSRR > both placebo variants on all 4 pooled OOF metrics AND TRUE_MSRR wins StrictPair and Edge >=4/5 folds against each placebo",
+    "otherwise": "WEAK_OR_NO_CONTEXT_SPECIFIC_SUPPORT"
+  },
+  "global_center_definition": "training-fold global mean only; applied unchanged to validation/test",
+  "learner": "XGBoost",
+  "original_120b_script": "${PROJECT_ROOT}\\scripts\\120B_RUN_MSRR_CROSS_BACKBONE_5FOLD_NO_LIGHTGBM_ONE_SHOT.py",
+  "original_120b_script_sha256": "cb5a7a785b0449565542911d50a0fb038a85f358974af4d96c86411054422ac3",
+  "outer_test_used_for_selection": false,
+  "placebo_seed": 20260829,
+  "placebos_validation_only_selected": true,
+  "post_result_rescue_allowed": false,
+  "raw_and_true_msrr_retrained": false,
+  "raw_and_true_msrr_source": "frozen 120B OOF margins",
+  "seed": 7,
+  "shuffled_context_definition": "label-blind within-partition strict derangement of matched-set means; all three members of each target set share the same alien context",
+  "status_at_start": "FROZEN_BEFORE_RESULTS",
+  "variants": [
+    "RAW",
+    "TRUE_MSRR",
+    "GLOBAL_CENTERED",
+    "SHUFFLED_CONTEXT"
+  ],
+  "xgb_candidates": [
+    {
+      "colsample_bytree": 0.85,
+      "config_id": "D4",
+      "gamma": 0.0,
+      "learning_rate": 0.04,
+      "max_depth": 4,
+      "min_child_weight": 2.0,
+      "n_estimators": 450,
+      "reg_alpha": 0.05,
+      "reg_lambda": 5.0,
+      "subsample": 0.9
+    },
+    {
+      "colsample_bytree": 0.8,
+      "config_id": "D6",
+      "gamma": 0.0,
+      "learning_rate": 0.03,
+      "max_depth": 6,
+      "min_child_weight": 2.0,
+      "n_estimators": 650,
+      "reg_alpha": 0.05,
+      "reg_lambda": 5.0,
+      "subsample": 0.9
+    },
+    {
+      "colsample_bytree": 0.75,
+      "config_id": "D8",
+      "gamma": 0.0,
+      "learning_rate": 0.02,
+      "max_depth": 8,
+      "min_child_weight": 2.0,
+      "n_estimators": 850,
+      "reg_alpha": 0.1,
+      "reg_lambda": 7.0,
+      "subsample": 0.9
+    }
+  ],
+  "xgb_jobs": 8
+}

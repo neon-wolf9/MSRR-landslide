@@ -1,0 +1,23 @@
+{
+  "experiment": "128B_CONSERVATIVE_PRETRIGGER_TEMPORAL_SENSITIVITY",
+  "preregistered_before_any_128B_scientific_model_result": true,
+  "scientific_results_seen_before_cutoff_selection": false,
+  "cutoff_selection_basis": "last complete 30-min timestamp strictly before independently documented event-specific landslide/debris-flow occurrence time",
+  "hiroshima_cutoff_utc": "2018-07-06T09:30:00Z",
+  "hiroshima_cutoff_jst": "2018-07-06T18:30:00+09:00",
+  "kyushu_cutoff_utc": "2017-07-05T07:00:00Z",
+  "kyushu_cutoff_jst": "2017-07-05T16:00:00+09:00",
+  "window_length": 70,
+  "interval_minutes": 30,
+  "dynamic_variable_definitions_changed": false,
+  "MSRR_definition_changed": false,
+  "model_family_changed": false,
+  "matching_protocol_changed": "false for Arm A; Arm B changes only the evaluation timestamp of frozen rainfall-dependent matching quantities if required by Phase A",
+  "post_result_rescue_allowed": false,
+  "primary_gate_arm": "ARM_A",
+  "arm_b_trigger": "ANY formal antecedent-rainfall matching variable requires recomputation at the conservative cutoff",
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "complete matched set",
+  "primary_learner": "XGBoost single-thread deterministic policy",
+  "candidate_grid": ["D4", "D6", "D8"]
+}

@@ -1,0 +1,30 @@
+{
+  "tests": {
+    "master_grid_13478": true,
+    "full_static_13478x92": true,
+    "full_dynamic_2587776": true,
+    "full_labels_13478": true,
+    "matched_sets_1692": true,
+    "matched_rows_5076": true,
+    "pair_structure": true,
+    "control_no_reuse": true,
+    "positive_no_reuse": true,
+    "unmatched_2": true,
+    "matched_static_5076x92": true,
+    "dynamic192_974592": true,
+    "dynamic192_unique": true,
+    "dynamic70_355320": true,
+    "dynamic70_index_contract": true,
+    "dynamic70_values_equal_source": true,
+    "index_csv_parquet_key_equal": true,
+    "index_csv_parquet_na_equal": true,
+    "feature_label_leakage_0": true,
+    "contract_violation_na_0": true,
+    "source_hash_change_0": true,
+    "model_file_read_0": true,
+    "prediction_file_generated_0": true,
+    "model_metric_generated_0": true
+  },
+  "TEST_RESULT": "PASS",
+  "verification_time_utc": "2026-08-30T06:30:36.741134+00:00"
+}

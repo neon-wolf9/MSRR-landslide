@@ -1,0 +1,56 @@
+{
+  "experiment": 131,
+  "created": "2026-09-07 16:47:01",
+  "formal_benchmark": "Hiroshima 5056 matched sets",
+  "representation_authority": "${PROJECT_ROOT}\\scripts\\126C_AUDIT_PAIRDIFF_CONVERGENCE_SENSITIVITY.py",
+  "xgb_grid_authority": "${PROJECT_ROOT}\\scripts\\120B_RUN_MSRR_CROSS_BACKBONE_5FOLD_NO_LIGHTGBM_ONE_SHOT.py",
+  "xgb_candidates": [
+    {
+      "config_id": "D4",
+      "n_estimators": 450,
+      "max_depth": 4,
+      "learning_rate": 0.04,
+      "min_child_weight": 2.0,
+      "subsample": 0.9,
+      "colsample_bytree": 0.85,
+      "reg_lambda": 5.0,
+      "reg_alpha": 0.05,
+      "gamma": 0.0
+    },
+    {
+      "config_id": "D6",
+      "n_estimators": 650,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "min_child_weight": 2.0,
+      "subsample": 0.9,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 5.0,
+      "reg_alpha": 0.05,
+      "gamma": 0.0
+    },
+    {
+      "config_id": "D8",
+      "n_estimators": 850,
+      "max_depth": 8,
+      "learning_rate": 0.02,
+      "min_child_weight": 2.0,
+      "subsample": 0.9,
+      "colsample_bytree": 0.75,
+      "reg_lambda": 7.0,
+      "reg_alpha": 0.1,
+      "gamma": 0.0
+    }
+  ],
+  "xgb_n_jobs": 1,
+  "new_models_trained": [
+    "PAIRDIFF_XGB"
+  ],
+  "outer_test_used_for_selection": false,
+  "kyushu_used_for_model_selection": false,
+  "extra_hyperparameter_search": false,
+  "post_result_rescue": false,
+  "bootstrap_B": 10000,
+  "bootstrap_unit": "complete matched set",
+  "source_sha256": "f27228ddfc12d09d5c6fbb5c018141894cdb7527c3541d0d577161a97383648a"
+}
