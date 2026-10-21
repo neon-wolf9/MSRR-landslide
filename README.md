@@ -14,6 +14,8 @@ The development benchmark is the July 2018 Hiroshima event (5,056 complete match
 
 Release status: `main` contains restored frozen configurations and an external preprocessing script that are absent from the existing `v1.0.0` tag. This branch is a pre-release candidate; no subsequent version is published. Use a verified `main` commit when assessing the complete public workflow, and do not cite `v1.0.0` as containing those restored files.
 
+Local assembly note (2026-10-21): this directory is an **unpublished** v1.0.1 review candidate, not the current GitHub `main`. It restores the original loader and benchmark-replay source dependencies, including the 126A audit authority and four historical matching/split modules; their only source edits replace the original personal project-root constant with a relative root. It also contains one author-generated pair-position array and non-sensitive exact-path metadata. Six model-ready derived inputs, two additional source-derived pair files, and two row-level scientific hand-offs remain excluded pending file-level rights review. `FINAL_REPRODUCIBILITY_GATE.md` records the data boundary; the public-baseline reports retain their original scope.
+
 The repository contains the real manuscript code and publication reference materials for:
 
 - Hiroshima and Kyushu benchmark construction and deterministic replay;
@@ -84,11 +86,11 @@ The synthetic example imports the canonical manuscript implementation and verifi
 
 ## Full reproduction
 
-Full reproduction requires independently acquired third-party EO/GIS products and the frozen derived scientific inputs at the documented relative paths.
+Full reproduction requires the frozen derived scientific inputs at their documented relative paths, or a verified reconstruction from independently acquired third-party EO/GIS products. **This public code package is not a runnable main-result reproduction bundle.** It contains the original loader code and byte-identical 120B-to-121/123/124D/125 output hand-off, but excludes rights-pending real runtime inputs and the 124D-to-125 prediction hand-off. The seven-file input checker is not the full loader gate. See `WORKFLOW_HANDOFF_AUDIT.md` and `REVIEWER_REPRODUCTION_GUIDE.md` before attempting a formal run.
 
 1. Read `docs/DATA_ACQUISITION.md`, `docs/DATA_LAYOUT.md`, and `docs/THIRD_PARTY_DATA.md`.
 2. Restore or reconstruct the Hiroshima and Kyushu inputs using the manifests, schemas, and frozen source versions.
-3. Verify the package and full input tree with `python scripts/01_verify_inputs.py --full`.
+3. Use `python scripts/01_verify_inputs.py --full` as a **seven-file screen only**, then audit the additional exact dependencies in `REPRODUCIBILITY_GAP_ANALYSIS.md`; a zero exit from that checker is not a full-workflow pass.
 4. Audit matching and deterministic benchmark replay:
 
    ```bash
@@ -110,7 +112,7 @@ Full reproduction requires independently acquired third-party EO/GIS products an
 
 7. Follow the ordered evidence chain in `docs/REPRODUCIBILITY.md` for ablation, placebo, comparators, sensitivity analyses, Kyushu evaluation, domain shift, and spatial analysis.
 
-Missing restricted inputs are expected to stop full-rerun scripts. Do not substitute current products for frozen event-specific sources without a documented equivalence audit.
+Missing non-bundled frozen inputs are expected to stop full-rerun scripts. Their absence does not prove that sharing them is prohibited. Do not substitute current products for frozen event-specific sources without a documented equivalence audit.
 
 ## Expected outputs
 
@@ -122,7 +124,7 @@ The principal Hiroshima XGBoost execution is the frozen 120B result. The later d
 
 Third-party EO/GIS source data and source inventories are not redistributed. Provider-controlled or authenticated products include AJG and GSI event evidence, GSI elevation, Copernicus DEM GLO-30, SoilGrids 2.0, Landsat 8 Collection 2 Level-2, CGLS-LC100 Collection 3, historical OpenStreetMap/Geofabrik extracts, J-FlwDir v1.4, GSJ Seamless Geological Map V2, and GPM IMERG Final Run V07B.
 
-Product identifiers, known versions or event cutoffs, official access records already present in the project, expected relative paths, and preprocessing cautions are documented in `docs/DATA_ACQUISITION.md` and `docs/DATA_SOURCES.md`. Redistribution status of derived geospatial artifacts requires a separate rights review; such artifacts are excluded from this public candidate.
+Product identifiers, known versions or event cutoffs, official access records already present in the project, expected relative paths, and preprocessing cautions are documented in `docs/DATA_ACQUISITION.md` and `docs/DATA_SOURCES.md`. `DATA_AVAILABILITY.md` classifies the seven absent full-workflow inputs as derived products and identifies specific small-file deposit candidates. Their release requires an author-led, source-specific rights and provenance decision; the public package cannot yet reproduce the reported event results from source data.
 
 ## Reproducibility
 

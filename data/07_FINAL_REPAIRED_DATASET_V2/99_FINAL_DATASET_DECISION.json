@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "canonical_group_crossfold_zero": true,
+    "canonical_groups_500": true,
+    "changed_slots_24": true,
+    "control_reuse_zero": true,
+    "controls_10112": true,
+    "controls_inside_corrected_core": true,
+    "corrected_core_28072": true,
+    "dynamic_finite": true,
+    "dynamic_future_read_zero": true,
+    "dynamic_negative_zero": true,
+    "dynamic_shape_15168_70_10": true,
+    "five_folds": true,
+    "p0_edge_failures_zero": true,
+    "pair_crossfold_zero": true,
+    "pair_sets_5056": true,
+    "pair_tensor_indices_valid": true,
+    "pair_tensor_shape_5056_3": true,
+    "positives_5056": true,
+    "positives_unchanged": true,
+    "spatial_group_crossfold_zero": true,
+    "static_fields_92": true,
+    "static_join_complete": true,
+    "training_rows_15168": true,
+    "unique_controls_10112": true
+  },
+  "failed_checks": [],
+  "source_version": "FINAL_REPAIRED_DATASET_V2_20260818",
+  "status": "PASS"
+}

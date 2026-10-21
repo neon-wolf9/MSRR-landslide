@@ -21,4 +21,4 @@ The full Hiroshima rerun expects the frozen repaired data products listed by `sc
 
 Paths in executable code resolve from the repository root or from script-relative project roots. Public documentation uses `${PROJECT_ROOT}` as a portable placeholder. A missing input is an informative stop and must not be replaced with fabricated or silently updated data.
 
-Raw third-party source data are intentionally excluded. Redistribution rights for derived geospatial products have not been established broadly enough for public inclusion; authors must complete a separate rights review before adding any such file.
+Raw third-party source data and the seven frozen derived inputs are intentionally absent from this package. This does not itself establish a legal prohibition on redistribution. The author must review the exact source vintage, attribution, database/share-alike obligations, and identity disclosure for each proposed derived file before a separate deposit; see `DATA_AVAILABILITY.md`.

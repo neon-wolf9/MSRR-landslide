@@ -24,6 +24,8 @@ Acquire the excluded products using `docs/DATA_ACQUISITION.md` and validate them
 python scripts/01_verify_inputs.py --full
 ```
 
+This command checks only seven model-ready files. It does **not** certify the original 20A/120B loader, ancillary schemas/pair tables, missing BASE-00 modules, or 120B output directory consumed by 121/124D. The actual unresolved dependency closure is recorded in `REPRODUCIBILITY_GAP_ANALYSIS.md`; the present public package cannot yet perform a main-result rerun.
+
 The underlying data-preparation lineage includes positive-evidence freezing, hard-control eligibility construction, reconciliation, terrain/static feature processing, rainfall assembly, and event-specific dataset freezing. Exact script roles are described in `docs/BENCHMARK_PROTOCOL.md`.
 
 ## 4. Hiroshima benchmark reconstruction
@@ -57,6 +59,8 @@ RAW contains 92 static predictors plus `70 x 10 = 700` rainfall values, for 792 
 ## 7. MSRR representation
 
 The canonical manuscript implementation is `dynsum7`, `raw_features`, and `msrr_features` in `scripts/120B_RUN_MSRR_CROSS_BACKBONE_5FOLD_NO_LIGHTGBM_ONE_SHOT.py`. For each unlabeled three-member set it concatenates RAW state, signed deviation from the shared mean, absolute deviation, and seven rainfall-residual summaries per rainfall variable. The final dimension is `792 + 792 + 792 + 70 = 2446`.
+
+The published synthetic fixture runs this transform and the matched-set metric interface without scientific observations. `tests/test_matching_integrity.py` also invokes the canonical common-support/all-or-none solver on invented legal edges to check two distinct controls, zero reuse, and exclusion of an unmatchable positive. These are runnable software contracts only. No public fixture currently regenerates Hiroshima or Kyushu covariate tables, source-to-benchmark construction, or manuscript scores; those require the non-bundled inputs classified in `DATA_AVAILABILITY.md`.
 
 ```bash
 python examples/minimal_msrr_example.py
@@ -118,6 +122,8 @@ python scripts/131_RUN_PAIRDIFF_XGB_FAIRNESS.py
 ```
 
 Frozen results are in `reference_results/comparators/`.
+
+The 126B entry checks the original `126A_AUDIT_FROZEN_XGB_REPLICATION.py` and its frozen `126A_DIAGNOSTIC_DECISION.json` as amendment authorities. Both are present in this local candidate. The original 126A script can perform technical fits when run; it is **not** a lightweight validation command and was not executed in release preparation.
 
 ## 14. Published comparators
 

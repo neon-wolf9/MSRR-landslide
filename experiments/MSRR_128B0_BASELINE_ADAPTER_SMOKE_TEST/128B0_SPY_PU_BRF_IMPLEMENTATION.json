@@ -1,0 +1,50 @@
+{
+  "adaptations": [
+    "RAW-792",
+    "fit-only RN mining",
+    "validation-only threshold selection"
+  ],
+  "authority": "Fu et al. 2024 IEEE JSTARS",
+  "fixed_parameters": {
+    "spy_fraction": 0.15,
+    "stage1": "RandomForestClassifier",
+    "stage2": "imbalanced-learn BalancedRandomForestClassifier"
+  },
+  "implementation_status": "PAPER_INFORMED_BENCHMARK_ADAPTATION",
+  "official_code": false,
+  "search_space": [
+    {
+      "config_id": "spy_min",
+      "threshold": "minimum positive score among spies"
+    },
+    {
+      "config_id": "spy_q05",
+      "threshold": "5th percentile positive score among spies"
+    },
+    {
+      "config_id": "spy_q10",
+      "threshold": "10th percentile positive score among spies"
+    }
+  ],
+  "selected_config": {
+    "AUPRC": 0.49345521759860256,
+    "AUROC": 0.654316612221058,
+    "Edge": 0.6805143422354105,
+    "StrictPair": 0.5321463897131553,
+    "brf_trees": 50,
+    "config_id": "spy_q10",
+    "n_RN": 2117,
+    "n_spies": 455,
+    "seed": 7,
+    "spy_fraction": 0.15,
+    "stage1_trees": 50,
+    "threshold": 0.06,
+    "valid": true,
+    "validation_score": 0.5901081404420566
+  },
+  "smoke_parameters": {
+    "BRF_trees": 50,
+    "stage1_trees": 50
+  },
+  "unresolved_ambiguity": "RN threshold is explicitly an implementation choice selected only on validation"
+}

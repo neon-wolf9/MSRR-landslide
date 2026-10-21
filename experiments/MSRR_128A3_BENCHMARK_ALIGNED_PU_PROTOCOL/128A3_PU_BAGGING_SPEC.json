@@ -1,0 +1,72 @@
+{
+  "actual_128_logic": "Planned faithful implementation on each P_fit/U_fit; P and U membership are the only training labels. Validation/test rows are scored by every fitted tree. OOB aggregation is retained for U_fit diagnostics only.",
+  "authority_note": "No Wu-author official repository was located. Ouyang author code independently reproduces T=1000, K=n_P and a balanced unconstrained DT but is not Wu's official implementation.",
+  "benchmark_adaptations": [
+    "tabular RAW-792 input",
+    "frozen spatial outer/validation folds",
+    "matched controls only as U",
+    "task-aligned validation selector"
+  ],
+  "comparison_role": "BENCHMARK_ALIGNED_ADAPTED_BASELINE_NOT_EXACT_REGIONAL_PIPELINE_REPRODUCTION",
+  "critical_ambiguity": "No executable 128 adapter exists in this phase.",
+  "fit_semantics": "P=inventory-supported positive; U=matched non-inventory controls, not verified negatives",
+  "fixed_params": {
+    "aggregation": "arithmetic mean of class-1 probabilities",
+    "base_learner": "sklearn.tree.DecisionTreeClassifier",
+    "sampling": "without replacement within each bag",
+    "seed_base": 12807
+  },
+  "implementation_choices": [
+    "T",
+    "tree hyperparameters",
+    "U subset multiplier and class_weight because the paper record does not uniquely freeze all software settings"
+  ],
+  "implementation_status": "PAPER_FAITHFUL_REIMPLEMENTATION_SPECIFIED_NOT_YET_EXECUTABLE",
+  "input": "RAW-792 only: 92 static + flattened 70x10 dynamic",
+  "method": "PU-BaggingDT",
+  "original_paper_logic": "Repeatedly sample U, temporarily label sampled U as class 0, train a decision tree with all P as class 1, and average positive-class scores; U OOB predictions exclude bags containing that U row.",
+  "ready": false,
+  "search_space": {
+    "T": [
+      100,
+      300,
+      500,
+      1000
+    ],
+    "U_subset_multiplier_of_nP": [
+      1,
+      2
+    ],
+    "class_weight": [
+      null,
+      "balanced"
+    ],
+    "max_depth": [
+      8,
+      16,
+      null
+    ],
+    "max_features": [
+      null,
+      "sqrt"
+    ],
+    "min_samples_leaf": [
+      1,
+      5,
+      20
+    ]
+  },
+  "seed_policy": "fixed per outer fold/config before execution; never selected by test metrics",
+  "selection": {
+    "data": "rotating validation fold only",
+    "outer_test_used": false,
+    "score": "mean(AUROC,AUPRC,StrictPair,Edge)",
+    "tie_break": [
+      "StrictPair",
+      "Edge",
+      "AUPRC",
+      "AUROC",
+      "earlier config index"
+    ]
+  }
+}

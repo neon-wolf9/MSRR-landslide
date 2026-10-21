@@ -1,0 +1,7 @@
+{
+  "kyushu_outcome_parsed_before_this_point": false,
+  "msrr_prediction_sha256": "4446c66eb92d077849d28ffd43244c05ae28f179fad50101eacc9d534ab86adf",
+  "prediction_rows_per_representation": 5076,
+  "raw_prediction_sha256": "621bd7fa642b236760f8ef93f65dee233edfd0da6604eacac6c69a0fe526d180",
+  "status": "PASS_ALL_EXTERNAL_PREDICTIONS_FIXED_BEFORE_LABEL_METRICS"
+}

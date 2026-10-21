@@ -1,5 +1,23 @@
 # Preserve manifest-verified checkout bytes on every platform.
 * text=auto eol=lf
+data/07_FINAL_REPAIRED_DATASET_V2/08_PAIR_TENSOR_INDEX_INT64.npy -text
+data/07_FINAL_REPAIRED_DATASET_V2/07A_DYNAMIC_70_TIMESTAMP_REGISTRY.csv text eol=crlf
+data/07_FINAL_REPAIRED_DATASET_V2/07B_DYNAMIC_10_FIELD_ORDER.csv text eol=crlf
+data/07_FINAL_REPAIRED_DATASET_V2/DATA_SECTION_CLOSED.flag text eol=crlf
+data/07_FINAL_REPAIRED_DATASET_V2/99_FINAL_DATASET_DECISION.json text eol=crlf
+data/05_final_dataset_assembly/02_model_ready_inputs/dataset_02_static_feature_schema.json text eol=crlf
+data/05_final_dataset_assembly/02_model_ready_inputs/dataset_02_dynamic_feature_schema.json text eol=crlf
+experiments/MSRR_CROSS_BACKBONE_5FOLD_V1B/*.npy -text
+experiments/MSRR_CROSS_BACKBONE_5FOLD_V1B/OOF_RESULTS.csv text eol=crlf
+experiments/MSRR_CROSS_BACKBONE_5FOLD_V1B/FOLD_METRICS.csv text eol=crlf
+experiments/MSRR_CROSS_BACKBONE_5FOLD_V1B/VALIDATION_SELECTION.csv text eol=crlf
+experiments/MSRR_CROSS_BACKBONE_5FOLD_V1B/RUN_MANIFEST.json text eol=crlf
+experiments/MSRR_128A3_BENCHMARK_ALIGNED_PU_PROTOCOL/*.json text eol=crlf
+experiments/MSRR_128B0_BASELINE_ADAPTER_SMOKE_TEST/*.json text eol=crlf
+experiments/MSRR_TASK_ALIGNED_BASELINES_5FOLD_V1/126A_REPLICATION_AUDIT/126A_DIAGNOSTIC_DECISION.json text eol=crlf
+experiments/MSRR_TASK_ALIGNED_BASELINES_5FOLD_V1B/126C_PAIRDIFF_CONVERGENCE_AUDIT/GATE126C_DECISION.json text eol=crlf
+experiments/130_ORIGINAL_BENCHMARK_EXACT_REPLAY_AUDIT/GATE130_DECISION.json text eol=crlf
+external/kyushu_2017_asakura_toho/100_external_validation/MSRR_KYUSHU2017_EXTERNAL_V1D/124D_PREDICTION_FREEZE.json text eol=crlf
 # Files originally recorded with CRLF in FILE_MANIFEST.csv use CRLF in checkouts.
 FILE_MANIFEST.csv text eol=crlf
 configs/features/FEATURE_DIMENSIONS.csv text eol=crlf

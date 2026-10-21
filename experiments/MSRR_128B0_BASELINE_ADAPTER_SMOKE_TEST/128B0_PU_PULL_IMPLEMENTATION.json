@@ -1,0 +1,58 @@
+{
+  "adaptations": [
+    "first Linear input only: 25 to 792; hidden/embedding widths unchanged",
+    "in-memory row loader",
+    "fit-fold-only StandardScaler and contrastive min-max",
+    "single deterministic encoder instead of manual closest/farthest checkpoint curation",
+    "validation interface",
+    "scalar row score interface"
+  ],
+  "authority": "unmodified ShubingOuyangcug/PU-pullbaggingDT vendor files",
+  "commit": "a8857dad30a454e3155644b18ddd2600df860e70",
+  "fixed_parameters": {
+    "fusion": "equal arithmetic mean of contrastive and PU-BaggingDT scores",
+    "learning_rate": 0.0001,
+    "loss": "released P-P attraction / P-U denominator",
+    "native_hidden_embedding": "50-100-50-50",
+    "official_epochs": 60,
+    "optimizer": "Adam"
+  },
+  "implementation_status": "OFFICIAL_CODE_INFORMED_BENCHMARK_ADAPTATION",
+  "official_code": true,
+  "repository": "https://github.com/ShubingOuyangcug/PU-pullbaggingDT",
+  "search_space": "single predeclared engineering config; no test selection",
+  "selected_config": {
+    "contrastive_fit_max": 0.9580532908439636,
+    "contrastive_fit_min": 0.744388997554779,
+    "embedding_dim": 50,
+    "epochs": 3,
+    "fold_local_scaler": true,
+    "fusion": "0.5*contrastive_score + 0.5*PU_BaggingDT_score",
+    "hidden_widths": [
+      50,
+      100,
+      50
+    ],
+    "input_dim": 792,
+    "learning_rate": 0.0001,
+    "losses": [
+      8.718804359436035,
+      8.716097831726074,
+      8.716928482055664
+    ],
+    "pu_trees": 20,
+    "seed": 7,
+    "validation_metrics": {
+      "AUPRC": 0.4872933999751016,
+      "AUROC": 0.6569217343152132,
+      "Edge": 0.6795252225519288,
+      "StrictPair": 0.5311572700296736,
+      "validation_score": 0.5887244067179793
+    }
+  },
+  "smoke_parameters": {
+    "PU_trees": 20,
+    "epochs": 3
+  },
+  "unresolved_ambiguity": "The single-encoder deterministic checkpoint adaptation is not an exact reproduction of the paper's manual closest/farthest ensemble."
+}

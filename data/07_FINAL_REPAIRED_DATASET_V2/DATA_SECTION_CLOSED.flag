@@ -1,0 +1,13 @@
+PASS
+version=FINAL_REPAIRED_DATASET_V2_20260818
+pair_sets=5056
+positives=5056
+controls=10112
+training_rows=15168
+static_fields=92
+dynamic_shape=15168x70x10
+pair_cross_fold=0
+spatial_group_cross_fold=0
+control_reuse=0
+p0_edge_failures=0
+controls_outside_corrected_hc00=0

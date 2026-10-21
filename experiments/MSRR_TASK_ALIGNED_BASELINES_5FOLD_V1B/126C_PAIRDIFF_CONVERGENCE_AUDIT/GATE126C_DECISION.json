@@ -1,0 +1,12 @@
+{
+  "126B_outputs_modified": false,
+  "ALL_CANDIDATES_CONVERGED": true,
+  "ALL_SELECTED_MODELS_CONVERGED": true,
+  "C6_ALL_CI95_LOW_GT_0": true,
+  "C6_ALL_OBSERVED_DELTAS_GT_0": true,
+  "FINAL_AUDIT_MAX_ITER": 6000,
+  "GATE126C_DECISION": "ROBUST_SELECTION_CHANGED_BUT_CONCLUSION_UNCHANGED",
+  "N_FOLDS_SELECTION_CHANGED": 2,
+  "reviewer_comment_3_pairdiff_convergence_sensitivity_complete": true,
+  "status": "PASS_126C_PAIRDIFF_CONVERGENCE_AUDIT_COMPLETE"
+}

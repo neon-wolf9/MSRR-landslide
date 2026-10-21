@@ -1,0 +1,48 @@
+{
+  "api_log1p_reason": "Frozen RAIN-04 schema does not prescribe API log1p; retain API physical scale before robust scaling",
+  "axis_meanings": {
+    "0": "sample_index",
+    "1": "192 frozen TARGET timestamps",
+    "2": "dynamic fields"
+  },
+  "dtype": "float32",
+  "feature_fields_in_order": [
+    "rain_30m_mm",
+    "rain_1h_mm",
+    "rain_3h_mm",
+    "rain_6h_mm",
+    "rain_12h_mm",
+    "rain_24h_mm",
+    "rain_48h_mm",
+    "rain_72h_mm",
+    "rain_120h_mm",
+    "api_k090_step30m_120h"
+  ],
+  "frozen_time_window_end_utc": "2018-07-09 00:00:00+00:00",
+  "future_fields_used": 0,
+  "interval_minutes": 30,
+  "log1p_for_model_branch": {
+    "api_k090_step30m_120h": false,
+    "rain_120h_mm": true,
+    "rain_12h_mm": true,
+    "rain_1h_mm": true,
+    "rain_24h_mm": true,
+    "rain_30m_mm": true,
+    "rain_3h_mm": true,
+    "rain_48h_mm": true,
+    "rain_6h_mm": true,
+    "rain_72h_mm": true
+  },
+  "missing_mask_dtype": "bool",
+  "raw_value_layer": "RAW_PHYSICAL",
+  "shape": [
+    15168,
+    192,
+    10
+  ],
+  "source_frozen_semantic_sha256": "c8f7285ba07699d016b3c08d215ff78e6b9aad6dfa49580c14a1d3e1ce73c416",
+  "source_schema_sha256": "8ed9b39e670de20b81ccbd08ab7093574aeaeac6c9c68f8848145401e2e63133",
+  "stage": "DATASET-02",
+  "time_axis_path": "D:\\landslide_s_ehc_net\\data\\05_final_dataset_assembly\\02_model_ready_inputs\\dataset_02_dynamic_time_axis.parquet",
+  "timezone": "UTC with JST trace column"
+}

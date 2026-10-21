@@ -1,0 +1,69 @@
+{
+  "actual_128_logic": "Planned two-stage fold-local implementation. RN mining is fit-only; no validation/test row may enter RN mining. Validation selects only predeclared choices.",
+  "authority_note": "The 2024 paper fixes 15% spies and RF as the prior classifier, and reports BRF; no official code was located. The prose says only that the threshold is based on spy probabilities, not a unique threshold functional.",
+  "benchmark_adaptations": [
+    "RAW-792",
+    "fit-only RN mining",
+    "matched controls as U",
+    "frozen validation selection instead of regional susceptibility zoning"
+  ],
+  "comparison_role": "BENCHMARK_ALIGNED_ADAPTED_BASELINE_NOT_EXACT_REGIONAL_PIPELINE_REPRODUCTION",
+  "critical_ambiguity": "RN threshold and full RF/BRF parameterization are not uniquely specified; imbalanced-learn is absent from the frozen environment.",
+  "fit_semantics": "P=inventory-supported positive; U=matched non-inventory controls, not verified negatives",
+  "fixed_params": {
+    "seed_base": 12817,
+    "spy_fraction": 0.15,
+    "stage1_classifier_family": "RandomForestClassifier",
+    "stage2_classifier_family": "BalancedRandomForestClassifier"
+  },
+  "implementation_choices": [
+    "exact RN threshold functional",
+    "RF/BRF software hyperparameters",
+    "RN cap/imbalance ratio if RN candidates exceed available U"
+  ],
+  "implementation_status": "PAPER_FAITHFUL_REIMPLEMENTATION_SPECIFIED_NOT_YET_EXECUTABLE",
+  "input": "RAW-792 only: 92 static + flattened 70x10 dynamic",
+  "method": "Spy-PU+BRF",
+  "original_paper_logic": "Randomly move 15% of P to U as spies; train a first RF on remaining P versus U+spies; derive an RN threshold from spy probabilities; restore all P; train the final imbalance-aware BRF on P and RN.",
+  "ready": false,
+  "search_space": {
+    "max_depth": [
+      12,
+      null
+    ],
+    "max_features": [
+      "sqrt"
+    ],
+    "min_samples_leaf": [
+      1,
+      5,
+      20
+    ],
+    "n_estimators": [
+      300,
+      500
+    ],
+    "replacement": [
+      true,
+      false
+    ],
+    "rn_threshold_rule": [
+      "min_spy_positive_score",
+      "spy_score_quantile_0.05",
+      "spy_score_quantile_0.10"
+    ]
+  },
+  "seed_policy": "fixed per outer fold/config before execution; never selected by test metrics",
+  "selection": {
+    "data": "rotating validation fold only",
+    "outer_test_used": false,
+    "score": "mean(AUROC,AUPRC,StrictPair,Edge)",
+    "tie_break": [
+      "StrictPair",
+      "Edge",
+      "AUPRC",
+      "AUROC",
+      "earlier config index"
+    ]
+  }
+}

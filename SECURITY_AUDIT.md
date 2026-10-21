@@ -8,8 +8,8 @@ The release tree was scanned recursively after the publication edits. No credent
 
 | Check | Status | Evidence / disposition |
 |---|---|---|
-| Usernames and home-directory paths | PASS | No `C:\Users\...`, `/home/...`, `/Users/...`, project-owner username, Desktop path, or Downloads path found. |
-| Project-machine absolute paths | PASS | No `D:\landslide_s_ehc_net` literal remains in public files. The restored comparator data contract resolves its root from `__file__`. |
+| Usernames and home-directory paths | PASS | No `[personal home path]`, `/home/...`, `/Users/...`, project-owner username, Desktop path, or Downloads path found. |
+| Project-machine absolute paths | PASS | No `[local project root]` literal remains in public files. The restored comparator data contract resolves its root from `__file__`. |
 | Passwords, tokens, API keys, cookies, authorization headers | PASS | No assigned credential patterns, bearer token, private key block, or credential file found. Documentation mentions these terms only to state that they are excluded. |
 | Private URLs | PASS | No localhost, loopback, RFC1918, or intranet URL found. Public provider and upstream repository URLs are intentional. |
 | Raw third-party EO/GIS data | PASS | No `.tif`, `.tiff`, `.gpkg`, `.shp`, `.shx`, `.dbf`, `.prj`, `.pbf`, `.hdf5`, `.h5`, `.nc`, `.nc4`, `.gdb`, or `.grd` source file is present. The `.npz` demo is synthetic and redistribution-safe. |

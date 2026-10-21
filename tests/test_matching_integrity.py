@@ -1,4 +1,5 @@
 from pathlib import Path
+import importlib.util
 
 import numpy as np
 import pandas as pd
@@ -44,3 +45,40 @@ def test_legal_edge_graph_enforces_two_controls_and_capacity_one():
     assert set(selected_controls[:2]).issubset({0, 1, 2})
     assert set(selected_controls[2:]).issubset({2, 3, 4})
     assert selected_controls[0] != 4 and selected_controls[1] != 4
+
+
+def test_canonical_common_support_interface_on_synthetic_edges():
+    """Exercise the published solver with invented IDs, not event observations."""
+    path = ROOT / "src" / "benchmark" / "hard_control_01e_common_support_protocol.py"
+    spec = importlib.util.spec_from_file_location("synthetic_common_support", path)
+    assert spec is not None and spec.loader is not None
+    protocol = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(protocol)
+    protocol.N_POS, protocol.N_CAND = 2, 3
+
+    positives = pd.DataFrame({"unit_id": ["SYN_P0", "SYN_P1"]})
+    candidates = pd.DataFrame({"unit_id": ["SYN_C0", "SYN_C1", "SYN_C2"]})
+    # P1 has only one legal edge, so the all-or-none rule must exclude it.
+    legal = pd.DataFrame({
+        "positive_index": [0, 0, 1],
+        "candidate_index": [0, 1, 1],
+        "composite_distance": [1.0, 2.0, 1.0],
+        "geology_parent": ["SYN_G"] * 3,
+        "matching_missingness_pattern_id": ["SYN_M"] * 3,
+        "soil_completeness_block": ["SYN_S"] * 3,
+    })
+    selected, feasibility = protocol.exact_all_or_none(legal, positives)
+    assert selected.tolist() == [0]
+    assert feasibility.loc[0, "all_or_none_upper_bound"] == 1
+
+    assignments, certificate = protocol.mincost_certificate(
+        legal, selected, positives, candidates
+    )
+    assert len(assignments) == 2
+    assert set(assignments["candidate_unit_id"]) == {"SYN_C0", "SYN_C1"}
+    assert assignments["candidate_unit_id"].is_unique
+    assert set(zip(assignments["positive_index"], assignments["candidate_index"])) <= set(
+        zip(legal["positive_index"], legal["candidate_index"])
+    )
+    assert assignments["TRAINING_DATA"].eq("NO").all()
+    assert certificate.loc[0, "solver_status"] == "OPTIMAL"

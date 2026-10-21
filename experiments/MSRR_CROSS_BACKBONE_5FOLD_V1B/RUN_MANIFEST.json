@@ -1,0 +1,101 @@
+{
+  "backbones": [
+    "ElasticNet-Logistic",
+    "MLP",
+    "HistGradientBoosting",
+    "XGBoost"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "hgb_candidates": [
+    {
+      "config_id": "H1",
+      "l2_regularization": 0.1,
+      "learning_rate": 0.05,
+      "max_depth": 6,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20
+    },
+    {
+      "config_id": "H2",
+      "l2_regularization": 1.0,
+      "learning_rate": 0.035,
+      "max_depth": 8,
+      "max_iter": 450,
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 20
+    },
+    {
+      "config_id": "H3",
+      "l2_regularization": 2.0,
+      "learning_rate": 0.025,
+      "max_depth": 10,
+      "max_iter": 600,
+      "max_leaf_nodes": 127,
+      "min_samples_leaf": 20
+    }
+  ],
+  "lightgbm_excluded_for_technical_runtime_reason": true,
+  "logistic_C_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "mlp_device": "cpu",
+  "msrr_dim": 2446,
+  "outer_test_used_for_selection": false,
+  "post_result_rescue_allowed": false,
+  "raw_dim": 792,
+  "replacement_tree_learner": "HistGradientBoostingClassifier",
+  "representations": [
+    "RAW",
+    "MSRR"
+  ],
+  "script": "120B_RUN_MSRR_CROSS_BACKBONE_5FOLD_NO_LIGHTGBM_ONE_SHOT.py",
+  "seed": 7,
+  "source_sha256": "cb5a7a785b0449565542911d50a0fb038a85f358974af4d96c86411054422ac3",
+  "xgb_candidates": [
+    {
+      "colsample_bytree": 0.85,
+      "config_id": "D4",
+      "gamma": 0.0,
+      "learning_rate": 0.04,
+      "max_depth": 4,
+      "min_child_weight": 2.0,
+      "n_estimators": 450,
+      "reg_alpha": 0.05,
+      "reg_lambda": 5.0,
+      "subsample": 0.9
+    },
+    {
+      "colsample_bytree": 0.8,
+      "config_id": "D6",
+      "gamma": 0.0,
+      "learning_rate": 0.03,
+      "max_depth": 6,
+      "min_child_weight": 2.0,
+      "n_estimators": 650,
+      "reg_alpha": 0.05,
+      "reg_lambda": 5.0,
+      "subsample": 0.9
+    },
+    {
+      "colsample_bytree": 0.75,
+      "config_id": "D8",
+      "gamma": 0.0,
+      "learning_rate": 0.02,
+      "max_depth": 8,
+      "min_child_weight": 2.0,
+      "n_estimators": 850,
+      "reg_alpha": 0.1,
+      "reg_lambda": 7.0,
+      "subsample": 0.9
+    }
+  ]
+}

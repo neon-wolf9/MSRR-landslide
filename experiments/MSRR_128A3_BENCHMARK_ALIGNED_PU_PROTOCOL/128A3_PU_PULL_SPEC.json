@@ -1,0 +1,148 @@
+{
+  "actual_released_logic": {
+    "batches": {
+      "P": "all P in current split",
+      "U": 350000
+    },
+    "embedding_dim": 50,
+    "encoder": [
+      "Linear(25,50)",
+      "ReLU",
+      "Linear(50,100)",
+      "ReLU",
+      "Linear(100,50)",
+      "ReLU",
+      "Linear(50,50)",
+      "Dropout(0.5)",
+      "L2 normalize"
+    ],
+    "epochs": 60,
+    "fusion": "arithmetic mean of normalized close/far contrastive maps, then arithmetic mean with PU-BaggingDT map",
+    "optimizer": "Adam(lr=1e-4)",
+    "pu_bagging": {
+      "T": 1000,
+      "U_subset_size": "K=n_P",
+      "aggregation": "mean class-1 probability over estimators that score a candidate",
+      "tree": "DecisionTreeClassifier(gini, max_depth=None, max_features=None, class_weight=balanced)"
+    }
+  },
+  "adaptation_decision": "NOT_AUTHORIZED_UNTIL architecture-width and normalization ambiguities are resolved; no loss, sampling, objective, or fusion changes are permitted.",
+  "benchmark_adaptations_required": [
+    "input tensor RAW-792",
+    "fold-local scaling",
+    "deterministic validation checkpoint interface",
+    "in-memory row scoring instead of raster I/O"
+  ],
+  "comparison_role": "BENCHMARK_ALIGNED_ADAPTED_BASELINE_NOT_EXACT_REGIONAL_PIPELINE_REPRODUCTION",
+  "critical_ambiguities": [
+    "Training and bagging scripts import missing evaluate_model.py.",
+    "Inference imports missing networks25.py/EmbeddingNet.",
+    "No LICENSE or dependency/environment manifest is present.",
+    "Checkpoint choice is a manual closest/farthest-distance workflow rather than a deterministic callable selection rule.",
+    "Changing channel/input_dim from 25 to 792 also changes hidden/embedding widths in the published script; a first-layer-only adaptation is not specified.",
+    "Repository-wide min-max normalization uses all raster rows; a leakage-safe fit-only adapter would change the released workflow.",
+    "Randomness is not fully controlled before DataLoader construction and the bagging branch has no explicit seed."
+  ],
+  "fit_semantics": "P=inventory-supported positive; U=matched non-inventory controls, not verified negatives",
+  "fixed_params": {
+    "epochs": 60,
+    "learning_rate": 0.0001,
+    "native_T": 1000,
+    "native_U_batch": 350000,
+    "native_embedding_dim": 50,
+    "native_input_dim": 25
+  },
+  "implementation_choices": [],
+  "implementation_status": "OFFICIAL_REPOSITORY_ACQUIRED_BUT_NOT_VERIFIED",
+  "input": "RAW-792 only: 92 static + flattened 70x10 dynamic",
+  "loss": "For normalized embeddings, positive attraction uses exp(mean off-diagonal P-P cosine); denominator adds sum exp(P-U cosine); mean -log(pos/(pos+neg)); temperature is 1 in released code.",
+  "method": "PU-pullbaggingDT",
+  "official_repository_audit": {
+    "audit_timestamp_utc": "2026-09-26T16:47:44.094644+00:00",
+    "clean_worktree": true,
+    "commit": "a8857dad30a454e3155644b18ddd2600df860e70",
+    "confirmed_batches": {
+      "P": "all P in current split",
+      "U": 350000
+    },
+    "confirmed_embedding_dim": 50,
+    "confirmed_encoder": [
+      "Linear(25,50)",
+      "ReLU",
+      "Linear(50,100)",
+      "ReLU",
+      "Linear(100,50)",
+      "ReLU",
+      "Linear(50,50)",
+      "Dropout(0.5)",
+      "L2 normalize"
+    ],
+    "confirmed_epochs": 60,
+    "confirmed_fusion": "arithmetic mean of normalized close/far contrastive maps, then arithmetic mean with PU-BaggingDT map",
+    "confirmed_optimizer": "Adam(lr=1e-4)",
+    "confirmed_pu_bagging": {
+      "T": 1000,
+      "U_subset_size": "K=n_P",
+      "aggregation": "mean class-1 probability over estimators that score a candidate",
+      "tree": "DecisionTreeClassifier(gini, max_depth=None, max_features=None, class_weight=balanced)"
+    },
+    "critical_ambiguities": [
+      "Training and bagging scripts import missing evaluate_model.py.",
+      "Inference imports missing networks25.py/EmbeddingNet.",
+      "No LICENSE or dependency/environment manifest is present.",
+      "Checkpoint choice is a manual closest/farthest-distance workflow rather than a deterministic callable selection rule.",
+      "Changing channel/input_dim from 25 to 792 also changes hidden/embedding widths in the published script; a first-layer-only adaptation is not specified.",
+      "Repository-wide min-max normalization uses all raster rows; a leakage-safe fit-only adapter would change the released workflow.",
+      "Randomness is not fully controlled before DataLoader construction and the bagging branch has no explicit seed."
+    ],
+    "file_sha256": {
+      "3guiyihua.py": "ec80aba2ccaebd93d1b69c60f015375212b251eaa10a8f0075066da5ab3c4517",
+      "AUC22.py": "7c47edda7ed801a36396f79505ccc431c5c190fbf9c115ff5648773f2845a9fd",
+      "AUCHE.py": "2c485b1c22f74c47b19489a423beb66edbde4c5fc593e12ac007694d36e0a881",
+      "Contrastive network.py": "ce9c886be200ecc9605ada591c935c6f694920c4de0b258f4db22b2f154fc010",
+      "PU-baggingDT.py": "acdbd1a118941052737ce4951792649eb71dd5da1a90ec44a041c574d30e6154",
+      "Precision_evaluation.py": "a561f9ecba01ff2afaea0c2da01faaaa83262497ec68cc17c9cc2f19553942f0",
+      "README.md": "2dfa349512a426bd5cf8f7e70b2f67fae765652ec64c29724dcff22b1ed0d5b8",
+      "empty": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "output image of Contrastive_network.py": "8785bfb1d031e157373f397781067b6caaa24c50d9b55926d61f6975d416619e"
+    },
+    "hardcoded_input_dim": 25,
+    "has_requirements": false,
+    "license": "NOT_PROVIDED",
+    "license_files": [],
+    "local_path": "D:\\landslide_s_ehc_net\\third_party\\PU-pullbaggingDT",
+    "missing_imported_modules": [
+      "evaluate_model.py",
+      "networks25.py"
+    ],
+    "remote": "https://github.com/ShubingOuyangcug/PU-pullbaggingDT.git",
+    "repository": "https://github.com/ShubingOuyangcug/PU-pullbaggingDT",
+    "tracked_files": [
+      "3guiyihua.py",
+      "AUC22.py",
+      "AUCHE.py",
+      "Contrastive network.py",
+      "PU-baggingDT.py",
+      "Precision_evaluation.py",
+      "README.md",
+      "empty",
+      "output image of Contrastive_network.py"
+    ]
+  },
+  "original_paper_logic": "PUpull contrastive representation plus PU-BaggingDT, followed by two-branch score fusion.",
+  "ready": false,
+  "search_space": "NOT_FROZEN: official released workflow uses manual checkpoint curation and does not expose a complete validation-safe search interface.",
+  "seed_policy": "fixed per outer fold/config before execution; never selected by test metrics",
+  "selection": {
+    "data": "rotating validation fold only",
+    "outer_test_used": false,
+    "score": "mean(AUROC,AUPRC,StrictPair,Edge)",
+    "tie_break": [
+      "StrictPair",
+      "Edge",
+      "AUPRC",
+      "AUROC",
+      "earlier config index"
+    ]
+  }
+}

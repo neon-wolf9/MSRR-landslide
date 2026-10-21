@@ -1,0 +1,36 @@
+{
+  "adaptations": [
+    "RAW-792",
+    "frozen folds",
+    "controls passed as U"
+  ],
+  "authority": "Wu et al. IEEE GRSL; 128A3 frozen specification; Ouyang author reproduction as corroboration only",
+  "fixed_parameters": {
+    "formal_T": 1000,
+    "temporary_U_fraction": 0.7,
+    "tree": "DecisionTreeClassifier(gini,max_depth=None,max_features=None,class_weight=balanced)"
+  },
+  "implementation_status": "PAPER_FAITHFUL_REIMPLEMENTATION",
+  "official_code": false,
+  "search_space": "single predeclared smoke config",
+  "selected_config": {
+    "class_weight": "balanced",
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "n_estimators": 50,
+    "seed": 7,
+    "temporary_U_size": 4248,
+    "u_fraction": 0.7,
+    "validation_metrics": {
+      "AUPRC": 0.4848165629794595,
+      "AUROC": 0.6747244210812615,
+      "Edge": 0.6671612265084075,
+      "StrictPair": 0.5242334322453017,
+      "validation_score": 0.5877339107036076
+    }
+  },
+  "smoke_parameters": {
+    "T": 50
+  },
+  "unresolved_ambiguity": ""
+}

@@ -1,0 +1,14 @@
+{
+  "blocking_reasons": [],
+  "fit_folds": [
+    3,
+    4,
+    5
+  ],
+  "next_step": "RUN_128B1_FULL_5FOLD_PUBLISHED_ALGORITHM_COMPARISON",
+  "outer_fold": 1,
+  "outer_test_metrics_computed": false,
+  "ready_for_full_5fold": true,
+  "status": "PASS_128B0_ADAPTER_SMOKE_TEST_COMPLETE",
+  "validation_fold": 2
+}
