@@ -14,7 +14,7 @@ The development benchmark is the July 2018 Hiroshima event (5,056 complete match
 
 Release status: `main` contains restored frozen configurations and an external preprocessing script that are absent from the existing `v1.0.0` tag. This branch is a pre-release candidate; no subsequent version is published. Use a verified `main` commit when assessing the complete public workflow, and do not cite `v1.0.0` as containing those restored files.
 
-The reviewed code package is on `main`. The real-data inputs and historical prediction hand-offs are distributed separately in the [published research-data record](https://doi.org/10.5281/zenodo.23533084), not in Git. The earlier packaging assessments in `FINAL_REPRODUCIBILITY_GATE.md` describe the pre-deposit state; they are not a statement that the Zenodo files are still unavailable. No v1.0.1 code tag or Release has been created.
+The reviewed code package is on `main`. The real-data inputs and historical prediction hand-offs are distributed separately in the [published research-data record](https://zenodo.org/records/23533084), not in Git. The earlier packaging assessments in `FINAL_REPRODUCIBILITY_GATE.md` describe the pre-deposit state; they are not a statement that the Zenodo files are still unavailable. No v1.0.1 code tag or Release has been created.
 
 The repository contains the real manuscript code and publication reference materials for:
 
@@ -86,7 +86,7 @@ The synthetic example imports the canonical manuscript implementation and verifi
 
 ## Research Data
 
-The published dataset is [MSRR landslide benchmark data: Hiroshima 2018 and Kyushu 2017](https://doi.org/10.5281/zenodo.23533084) (Zenodo record [23533084](https://zenodo.org/records/23533084)). Download **`MSRR_CG_approved_data_candidate.zip`** from that record. Zenodo lists one 21.6 MB ZIP with MD5 `0060b0eb325d36add38e5f0bf811b503`; this is the published file, not a GitHub code release.
+The published dataset is [MSRR landslide benchmark data: Hiroshima 2018 and Kyushu 2017](https://zenodo.org/records/23533084) (version DOI: [10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084)). Download **`MSRR_CG_approved_data_candidate.zip`** from the record URL; use that direct record link if DOI registration has not yet propagated to the resolver. Zenodo lists one 21.6 MB ZIP with MD5 `0060b0eb325d36add38e5f0bf811b503`; this is the published file, not a GitHub code release.
 
 From the root of this repository, extract the ZIP without changing its internal paths (replace the ZIP path below with its download location):
 
@@ -107,7 +107,7 @@ The existing input checker covers seven model-ready paths, not every downstream 
 
 ## Full reproduction
 
-Full reproduction requires the separately deposited frozen derived inputs at their documented relative paths, plus any workflow-specific upstream products or intermediates identified in the original guides. First restore the [Zenodo data ZIP](https://doi.org/10.5281/zenodo.23533084) as described above. The seven-file input checker is not the full loader gate, and this README does not claim that every formal workflow has been rerun from the public package. See `WORKFLOW_HANDOFF_AUDIT.md` and `REVIEWER_REPRODUCTION_GUIDE.md` for the original dependency audit and `docs/REPRODUCIBILITY.md` for the script order.
+Full reproduction requires the separately deposited frozen derived inputs at their documented relative paths, plus any workflow-specific upstream products or intermediates identified in the original guides. First restore the [Zenodo data ZIP](https://zenodo.org/records/23533084) as described above. The seven-file input checker is not the full loader gate, and this README does not claim that every formal workflow has been rerun from the public package. See `WORKFLOW_HANDOFF_AUDIT.md` and `REVIEWER_REPRODUCTION_GUIDE.md` for the original dependency audit and `docs/REPRODUCIBILITY.md` for the script order.
 
 1. Read `docs/DATA_ACQUISITION.md`, `docs/DATA_LAYOUT.md`, and `docs/THIRD_PARTY_DATA.md`.
 2. Restore the deposited Hiroshima and Kyushu inputs from Zenodo at their original relative paths; use the manifests, schemas, and frozen source versions when independently reconstructing upstream inputs.
@@ -145,7 +145,7 @@ The principal Hiroshima XGBoost execution is the frozen 120B result. The later d
 
 Third-party EO/GIS source data and source inventories are not redistributed. Provider-controlled or authenticated products include AJG and GSI event evidence, GSI elevation, Copernicus DEM GLO-30, SoilGrids 2.0, Landsat 8 Collection 2 Level-2, CGLS-LC100 Collection 3, historical OpenStreetMap/Geofabrik extracts, J-FlwDir v1.4, GSJ Seamless Geological Map V2, and GPM IMERG Final Run V07B.
 
-Product identifiers, known versions or event cutoffs, expected relative paths, and preprocessing cautions are documented in `docs/DATA_ACQUISITION.md` and `docs/DATA_SOURCES.md`. The eleven published derived inputs and historical hand-offs are in the [Zenodo data record](https://doi.org/10.5281/zenodo.23533084), whose metadata document source-specific rights. `DATA_AVAILABILITY.md` retains the earlier GitHub-only packaging audit and points to the superseding deposit. Raw source-product acquisition remains separate.
+Product identifiers, known versions or event cutoffs, expected relative paths, and preprocessing cautions are documented in `docs/DATA_ACQUISITION.md` and `docs/DATA_SOURCES.md`. The eleven published derived inputs and historical hand-offs are in the [Zenodo data record](https://zenodo.org/records/23533084), whose metadata document source-specific rights. `DATA_AVAILABILITY.md` retains the earlier GitHub-only packaging audit and points to the superseding deposit. Raw source-product acquisition remains separate.
 
 ## Reproducibility
 

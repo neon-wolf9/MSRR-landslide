@@ -18,7 +18,7 @@ The exact validated public package versions are in `requirements.txt`. Platform-
 
 ## 3. Data preparation
 
-First download `MSRR_CG_approved_data_candidate.zip` from [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), extract it at the repository root without changing paths, and verify its `metadata/SHA256SUMS.txt` as shown in the README. The archive supplies eleven frozen derived inputs/hand-offs at their original `data/`, `external/`, and `experiments/` paths; raw third-party products are not included. For source-to-benchmark reconstruction, acquire those raw products using `docs/DATA_ACQUISITION.md` and validate against `docs/DATA_SOURCES.md`, `data/manifests/`, and `data/schemas/`. Then run:
+First download `MSRR_CG_approved_data_candidate.zip` from [Zenodo record 23533084](https://zenodo.org/records/23533084) (DOI 10.5281/zenodo.23533084), extract it at the repository root without changing paths, and verify its `metadata/SHA256SUMS.txt` as shown in the README. The archive supplies eleven frozen derived inputs/hand-offs at their original `data/`, `external/`, and `experiments/` paths; raw third-party products are not included. For source-to-benchmark reconstruction, acquire those raw products using `docs/DATA_ACQUISITION.md` and validate against `docs/DATA_SOURCES.md`, `data/manifests/`, and `data/schemas/`. Then run:
 
 ```bash
 python scripts/01_verify_inputs.py --full
