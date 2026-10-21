@@ -33,5 +33,5 @@ Kyushu labels, roles, and outcomes are not used for feature fitting, preprocessi
 
 ## Verification
 
-`scripts/15_verify_reference_results.py` checks dimensions, set counts, metric domains, expected method coverage, cross-file identities, and the SHA-256 manifest. The pytest suite repeats the critical checks in small isolated tests. Full numerical regeneration requires the restricted inputs described in `DATA_AVAILABILITY.md`.
+`scripts/15_verify_reference_results.py` checks dimensions, set counts, metric domains, expected method coverage, cross-file identities, and the SHA-256 manifest. The pytest suite repeats the critical checks in small isolated tests. Eleven frozen derived study files and historical hand-offs are separately deposited at [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084); full source-to-results regeneration may additionally require raw provider products and upstream intermediates described in `DATA_AVAILABILITY.md`.
 

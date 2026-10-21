@@ -1,5 +1,7 @@
 # Final local reproducibility gate (2026-10-21)
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 This is an unpublished candidate assessment, not a data licence, a release, or a claim that a formal experiment was rerun. The original research tree was inspected read-only. The ten private files below are **present and metadata-readable** at the listed repository-relative paths in that tree; no data bytes were copied to this candidate during this gate. The eight input SHA-256 values were remeasured and matched the Hiroshima/Kyushu frozen manifests. The two hand-off values were remeasured and matched the earlier hand-off audit; their original output inventories are not treated as redistribution licences. All ten remain absent from the candidate pending an explicit file-level deposit decision.
 
 | Exact relative path | Bytes; rows/shape; SHA-256 | Producer/consumer and rights disposition |

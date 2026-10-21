@@ -1,5 +1,7 @@
 # Minimum public-data plan (proposal and local candidate)
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 Only the author-generated pair-position array has been copied into a **separate unpublished local candidate**; it is excluded from this public code package pending final attribution/ownership sign-off. No six other real model-ready inputs have been copied or approved for upload. The table identifies the existing frozen bytes to consider after the decisions in `DATA_RIGHTS_AUDIT.md`. Place any cleared files in a data archive with their own licence/attribution statement and stable URL, then document exact repository-relative placement. Do not put them under the MIT software licence by implication, and do not publish a ZIP-only repository.
 
 | Priority | Candidate relative path | Bytes | Frozen SHA-256 | Why needed / remaining risk |

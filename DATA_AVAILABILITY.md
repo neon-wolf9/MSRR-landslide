@@ -26,7 +26,11 @@ This repository does not bundle the third-party raw EO/GIS products or source in
 - GSJ/AIST Seamless Digital Geological Map source vectors;
 - credentials, API keys, cookies, tokens, passwords, or account files.
 
-## Seven frozen *derived* inputs needed by the published full-workflow entry points
+## Historical GitHub-only packaging assessment (superseded by the Zenodo deposit)
+
+The following seven-file table preserves the pre-deposit rights and packaging assessment. Its “not bundled” entries mean **not in Git**, not unavailable to reviewers: the published Zenodo ZIP now contains these frozen study inputs alongside four additional study files. Use the ZIP's current metadata and licence notices for deposit status and attribution.
+
+### Seven frozen *derived* inputs needed by the published full-workflow entry points
 
 The seven paths reported by `python scripts/01_verify_inputs.py --full` are locally generated study products, **not seven raw third-party downloads**. None has been uploaded to GitHub. The four Hiroshima paths are under `data/07_FINAL_REPAIRED_DATASET_V2/`; the three Kyushu paths are under `external/kyushu_2017_asakura_toho/99_frozen_dataset/`. A separate unpublished local candidate contains `08_PAIR_TENSOR_INDEX_INT64.npy`, a pure author-generated position array, but this public code commit excludes it pending final attribution/ownership sign-off. The other six remain excluded pending rights review; no source data were changed.
 
@@ -40,7 +44,7 @@ The seven paths reported by `python scripts/01_verify_inputs.py --full` are loca
 | `kyushu_external_matched_static_92f_v1.parquet` | Mixed-source Kyushu 92-feature table. | Not bundled; source-by-source rights and attribution review needed. |
 | `kyushu_external_matched_dynamic_10f_70slot_view_v1.parquet` | Rainfall-derived values with unit IDs and time slots; GPM terms plus linkage to event identities need review. | Not bundled; source and identity review needed. |
 
-The actual blockers for a public end-to-end rerun include **six remaining frozen model-ready products, two additional source-derived pair files, the 121-to-128 and 124D-to-125 prediction hand-offs, and some upstream vintage inputs**—not an established blanket ban on sharing derived data. The eight runtime inputs and two row-level hand-offs, with exact paths, schemas, hashes, producer/consumer relationships and rights questions, are listed in `FINAL_REPRODUCIBILITY_GATE.md`. The local candidate has restored loader code, exact-path metadata and the byte-identical 120B output hand-off; it has not been published. `scripts/01_verify_inputs.py --full` checks only seven files, not the complete dependency closure. A viable release route is an author-approved, separately licensed data deposit with exact frozen bytes, SHA-256, source/vintage provenance, attribution, plus a tested placement/import guide; see `WORKFLOW_HANDOFF_AUDIT.md`. If that route is not lawful or feasible for a particular product, give a concrete reacquisition/reconstruction route and state the resulting verification limit. Never replace these with synthetic values to claim manuscript-result reproduction.
+The pre-deposit blocker assessment above is historical. The Zenodo archive now supplies eleven frozen derived study files and historical hand-offs at the documented relative paths. `scripts/01_verify_inputs.py --full` checks only seven paths, not the complete dependency closure. A full source-to-results rerun may additionally require original upstream EO/GIS products and workflow-specific intermediates; use the exact source/vintage instructions in `docs/DATA_SOURCES.md` and do not substitute synthetic values to claim manuscript-result reproduction.
 
 The public synthetic example checks the canonical 792-to-2446 MSRR transform and matched-set metrics. The test suite also checks exact replay membership invariants and a test-only invented legal-edge graph through the canonical common-support/all-or-none matching interface. These are software-behaviour checks, not an independent recreation of either event dataset or reported scores.
 

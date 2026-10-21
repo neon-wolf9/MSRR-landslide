@@ -23,9 +23,9 @@ pytest -q -p no:cacheprovider
 
 The synthetic demo is the fastest canonical check and does not require any third-party data. The test suite additionally exercises canonical legal-edge/all-or-none allocation on invented IDs. Neither check recreates event observations or reported scores.
 
-## 3. Future full rerun after resolving non-bundled inputs and historical hand-offs
+## 3. Full-workflow map after restoring published derived inputs
 
-The expected root is the package root itself. Place the frozen Hiroshima inputs below `data/` and the Kyushu inputs below `external/kyushu_2017_asakura_toho/`, using `data/manifests/`, `configs/external/`, and `docs/DATA_DICTIONARY.md` as the contracts.
+The expected root is the package root itself. Download `MSRR_CG_approved_data_candidate.zip` from [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084) and extract it at that root without changing the archive's relative paths. Verify its eleven study files against `metadata/SHA256SUMS.txt` as described in `README.md`. The Hiroshima inputs then reside below `data/`, and the Kyushu inputs below `external/kyushu_2017_asakura_toho/`. Use `data/manifests/`, `configs/external/`, and `docs/DATA_DICTIONARY.md` as the contracts.
 
 Recommended formal order:
 
@@ -51,4 +51,4 @@ python scripts/126_RUN_HIROSHIMA_KYUSHU_DOMAIN_SHIFT_CHARACTERIZATION.py
 python scripts/127B_RUN_MSRR_SPATIAL_MATCHED_MARGIN_ANALYSIS_AUTO_GEOMETRY.py
 ```
 
-These commands are a provenance map, **not currently executable end-to-end from the public package**. The local candidate now includes the BASE-00 modules, benchmark-replay source modules and original 120B output hand-off. The 120B loader still requires five non-bundled Hiroshima inputs, and 124D/125 additionally require three Kyushu inputs; 125 and 128 need further row-level historical hand-offs. See `FINAL_REPRODUCIBILITY_GATE.md`. A missing asset is an informative stop—not permission to substitute another dataset. The 126B script also checks the preserved 126A diagnostic authority; it must not be treated as an independent fresh result.
+These commands are a provenance map, **not a claim that the formal experiments were rerun**. The Zenodo archive supplies eleven frozen derived inputs and historical hand-offs, while source-to-benchmark reconstruction still requires separately acquired raw EO/GIS products and workflow-specific upstream intermediates. Check each script's input gate before a separately authorized formal run; a missing asset is an informative stop, not permission to substitute another dataset. The 126B script also checks the preserved 126A diagnostic authority; it must not be treated as an independent fresh result.

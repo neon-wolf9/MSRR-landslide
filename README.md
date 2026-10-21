@@ -12,7 +12,7 @@ The development benchmark is the July 2018 Hiroshima event (5,056 complete match
 
 ## Repository scope
 
-Release status: the complete public code package is [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). The earlier `v1.0.0` snapshot predates restored frozen configurations and an external preprocessing script; do not cite it as containing the complete workflow.
+Release status: the complete public code package is [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). The tagged version contains the restored frozen configurations and external preprocessing script.
 
 The release is based on the reviewed code package on `main`. The real-data inputs and historical prediction hand-offs are distributed separately in the [published research-data record](https://zenodo.org/records/23533084), not in Git. The earlier packaging assessments in `FINAL_REPRODUCIBILITY_GATE.md` describe the pre-deposit state; they are not a statement that the Zenodo files are still unavailable.
 

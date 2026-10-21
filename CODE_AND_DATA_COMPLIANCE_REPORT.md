@@ -1,5 +1,7 @@
 # Computers & Geosciences code-and-data gate — public-baseline audit, 2026-10-21
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 This report is the earlier **public-baseline** gate. The newer unpublished local assembly and its distinct tests are recorded in `RELEASE_CANDIDATE_STATUS.md`. Do not interpret the 331-file/11-test figures below as validation of the assembled candidate.
 
 **Decision: NOT READY — BLOCKERS REMAIN.** This is a local, unpublished documentation candidate. No scientific method, result, frozen configuration or real-data file was changed or uploaded. No tag or release was made.

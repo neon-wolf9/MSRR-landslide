@@ -1,5 +1,7 @@
 # Validation Report
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 Historical validation notice: the results below were recorded on 2026-10-01/02 against the then-current local package. They do not establish that the later restored files on GitHub `main` pass an independent fresh-clone test. The existing `v1.0.0` tag is incomplete relative to `main`; no later release is asserted here.
 
 ## Public-candidate revalidation — 2026-10-02

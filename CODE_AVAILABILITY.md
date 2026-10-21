@@ -1,6 +1,6 @@
 # Code availability
 
-The included Python files retain the experiment identifiers used during the study. The complete public code package is available as [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). The earlier `v1.0.0` snapshot predates restored frozen configurations and an external preprocessing script. The separately published research data have DOI [10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084); this is not a code DOI.
+The included Python files retain the experiment identifiers used during the study. The complete public code package is available as [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). The separately published research data have DOI [10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084); this is not a code DOI.
 
 Machine-specific roots were sanitized as follows:
 

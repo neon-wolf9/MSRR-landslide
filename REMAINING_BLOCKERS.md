@@ -1,5 +1,7 @@
 # Remaining release blockers (2026-10-21)
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 Decision for this **unpublished local remediation candidate**: **NOT READY**. No tag or GitHub release was created; `v1.0.0` was not changed. This is a focused follow-up to the earlier audit, not a claim that the full scientific experiment was rerun.
 
 Historical local light-gate evidence from the previous focused audit: Python 3.10.20 in `[local audit environment]`; the five lightweight commands exited 0 and pytest reported **11 passed** on that earlier working tree. The log is `[local non-distributed validation log]`. These results must not be relabelled as validation of later documentation changes.

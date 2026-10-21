@@ -16,7 +16,7 @@ python scripts/15_verify_reference_results.py
 python -m pytest -q -p no:cacheprovider
 ```
 
-`00_check_environment.py` prints the Python version and import status for the pinned dependencies. `01_verify_inputs.py` checks public metadata and lists seven non-bundled derived inputs; its `--full` option makes missing items among those seven a nonzero exit, but is **not** a complete full-workflow dependency gate. `15_verify_reference_results.py` checks the frozen reference tables, arrays, and `FILE_MANIFEST.csv` hashes and prints the number of checked files. The test suite checks representation dimensions, matching and fold integrity, metrics, and reference outputs. These checks read the packaged inputs and references; they do not train models.
+`00_check_environment.py` prints the Python version and import status for the pinned dependencies. `01_verify_inputs.py` checks public metadata and lists seven derived inputs that are separately available from the Zenodo data deposit; its `--full` option makes missing items among those seven a nonzero exit, but is **not** a complete full-workflow dependency gate. `15_verify_reference_results.py` checks the frozen reference tables, arrays, and `FILE_MANIFEST.csv` hashes and prints the number of checked files. The test suite checks representation dimensions, matching and fold integrity, metrics, and reference outputs. These checks read the packaged inputs and references; they do not train models.
 
 ### Full scientific rerun
 

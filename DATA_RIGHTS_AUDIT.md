@@ -1,5 +1,7 @@
 # Data-rights audit — release candidate, 2026-10-21
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 Scope: the seven **derived** files needed by the Hiroshima/Kyushu model-ready workflows. This is a provenance and licence-evidence audit, not legal clearance for all source products or authorization to upload data. The original project was read only. A separate unpublished local candidate contains only the author-generated 1:2 integer-position array of the seven; the public code package excludes that array pending final sign-off. `NEEDS RIGHTS REVIEW` means that a file is not yet cleared for public deposit, **not** that redistribution is prohibited.
 
 ## Evidence and file-by-file decision

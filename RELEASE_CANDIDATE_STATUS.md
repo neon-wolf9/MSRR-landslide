@@ -1,5 +1,7 @@
 # Unpublished v1.0.1 candidate — release-review gate (2026-10-21)
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 **Scope note:** This document records the earlier assembly stages; its 11-test/346-file figures are historical, not the current acceptance. `FINAL_REPRODUCIBILITY_GATE.md` is the current ten-file data/hand-off and 128 provenance decision, and `WORKFLOW_HANDOFF_AUDIT.md` records the later 14-test/369-manifest stage. See the latest candidate validation log for post-edit counts.
 
 **Decision: NOT READY — SPECIFIC BLOCKERS.** Location: `[unpublished local candidate]`. This is a local file package, not a Git tag, GitHub commit, release, or uploaded data deposit. The original research data and `v1.0.0` were not changed. No formal training, validation, testing, ablation, bootstrap, or data rebuilding was performed. **Current hand-off update:** 12 original 120B output files and seven 128A3/128B0 authority records have now been copied unchanged to the exact executable paths; `WORKFLOW_HANDOFF_AUDIT.md` is the detailed current evidence.

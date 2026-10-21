@@ -1,5 +1,7 @@
 # Scientific dependency and frozen hand-off audit (local candidate, 2026-10-21)
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 No formal experiment was executed. Findings below come from static source inspection, safe imports, metadata reads, byte-for-byte copying of existing author results, and lightweight path tests. `reference_results/` contains curated publication evidence; it is **not** automatically the filesystem layout consumed by the formal scripts.
 
 ## 120B actual loader closure

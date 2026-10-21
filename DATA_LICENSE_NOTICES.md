@@ -1,5 +1,7 @@
 # Data licences and attribution for the unpublished candidate
 
+> **Historical pre-release record.** Retained for scientific and release provenance. Statements below about a candidate, missing deposit, tag, or publication status describe the audit-time snapshot, not the current release. For current code and data access, use [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1), [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084), and `README.md`. Historical tests are not a new scientific rerun.
+
 The repository `LICENSE` is an MIT **software** licence. It does not grant rights in third-party imagery, inventories, maps, databases, or mixed-source derived tables. Nothing in this local candidate has been uploaded.
 
 The only real-data array currently copied here is `data/07_FINAL_REPAIRED_DATASET_V2/08_PAIR_TENSOR_INDEX_INT64.npy`: 5,056 × 3 author-generated integer row positions, SHA-256 `fa8aa5f7b8d1659199ff0aa25d7e452a363c5a226da66407d23a809d18040169`. It contains no source raster values, labels, coordinates, geometry, or named-person fields. It is not meaningful without the separately reviewed sample index. Final deposit should identify the authors as the compilation creators and state a separate data licence after their sign-off.
