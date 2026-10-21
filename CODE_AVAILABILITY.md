@@ -1,6 +1,6 @@
 # Code availability
 
-The included Python files retain the experiment identifiers used during the study. The public repository is https://github.com/neon-wolf9/MSRR-landslide. Its `main` branch contains restored frozen configurations and an external preprocessing script absent from the existing `v1.0.0` tag. No replacement release or Zenodo DOI is claimed; cite the exact commit when using the complete public workflow.
+The included Python files retain the experiment identifiers used during the study. The complete public code package is available as [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). The earlier `v1.0.0` snapshot predates restored frozen configurations and an external preprocessing script. The separately published research data have DOI [10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084); this is not a code DOI.
 
 Machine-specific roots were sanitized as follows:
 
@@ -9,7 +9,7 @@ Machine-specific roots were sanitized as follows:
 - historical absolute paths in manifests and reports are represented as `${PROJECT_ROOT}`;
 - Python subprocess launchers use the active interpreter rather than a personal environment path.
 
-The repository-preparation edits did not change a scientific calculation, model setting, seed, matching constraint, or frozen result. `VALIDATION_REPORT.md` records historical validation; an independent remote-clone acceptance is required before a new release decision.
+The repository-preparation edits did not change a scientific calculation, model setting, seed, matching constraint, or frozen result. `VALIDATION_REPORT.md` records historical validation; release preparation did not rerun the full scientific experiments.
 
 The authoritative execution map is `docs/EXPERIMENT_MAP.md`. Development-only experiments, failed prototypes, figure-composition files, caches, and unrelated S-EHC-Net history were intentionally excluded.
 

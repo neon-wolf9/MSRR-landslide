@@ -12,9 +12,9 @@ The development benchmark is the July 2018 Hiroshima event (5,056 complete match
 
 ## Repository scope
 
-Release status: `main` contains restored frozen configurations and an external preprocessing script that are absent from the existing `v1.0.0` tag. This branch is a pre-release candidate; no subsequent version is published. Use a verified `main` commit when assessing the complete public workflow, and do not cite `v1.0.0` as containing those restored files.
+Release status: the complete public code package is [v1.0.1](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). The earlier `v1.0.0` snapshot predates restored frozen configurations and an external preprocessing script; do not cite it as containing the complete workflow.
 
-The reviewed code package is on `main`. The real-data inputs and historical prediction hand-offs are distributed separately in the [published research-data record](https://zenodo.org/records/23533084), not in Git. The earlier packaging assessments in `FINAL_REPRODUCIBILITY_GATE.md` describe the pre-deposit state; they are not a statement that the Zenodo files are still unavailable. No v1.0.1 code tag or Release has been created.
+The release is based on the reviewed code package on `main`. The real-data inputs and historical prediction hand-offs are distributed separately in the [published research-data record](https://zenodo.org/records/23533084), not in Git. The earlier packaging assessments in `FINAL_REPRODUCIBILITY_GATE.md` describe the pre-deposit state; they are not a statement that the Zenodo files are still unavailable.
 
 The repository contains the real manuscript code and publication reference materials for:
 
@@ -86,7 +86,7 @@ The synthetic example imports the canonical manuscript implementation and verifi
 
 ## Research Data
 
-The published dataset is [MSRR landslide benchmark data: Hiroshima 2018 and Kyushu 2017](https://zenodo.org/records/23533084) (version DOI: [10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084)). Download **`MSRR_CG_approved_data_candidate.zip`** from the record URL; use that direct record link if DOI registration has not yet propagated to the resolver. Zenodo lists one 21.6 MB ZIP with MD5 `0060b0eb325d36add38e5f0bf811b503`; this is the published file, not a GitHub code release.
+The published dataset is [MSRR landslide benchmark data: Hiroshima 2018 and Kyushu 2017](https://zenodo.org/records/23533084) (version DOI: [10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084)). Download **`MSRR_CG_approved_data_candidate.zip`** from the record URL. Zenodo lists one 21.6 MB ZIP with MD5 `0060b0eb325d36add38e5f0bf811b503`; this is the published file, not a GitHub code release.
 
 From the root of this repository, extract the ZIP without changing its internal paths (replace the ZIP path below with its download location):
 
@@ -155,7 +155,7 @@ A new source-data-to-results rerun is not claimed by this data-link update. See 
 
 ## Citation
 
-Software citation metadata are in `CITATION.cff`, including the public repository URL: https://github.com/neon-wolf9/MSRR-landslide. Cite the **data** separately using [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084). This data DOI is not a DOI for an unpublished v1.0.1 code Release.
+Software citation metadata are in `CITATION.cff`; cite the [v1.0.1 code release](https://github.com/neon-wolf9/MSRR-landslide/releases/tag/v1.0.1). Cite the **data** separately using [Zenodo DOI 10.5281/zenodo.23533084](https://doi.org/10.5281/zenodo.23533084). The data DOI is not a DOI for the code release.
 
 ## License
 
