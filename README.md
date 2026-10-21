@@ -62,6 +62,10 @@ python -m pip install -r requirements.txt
 
 The dependency list reflects imports and the clean validation environment. Full model reruns can remain sensitive to CPU/GPU libraries and platform-specific geospatial wheels; use the recorded versions where available.
 
+### Computational requirements
+
+The redistribution-safe quick start was validated on 64-bit Windows with Python 3.10.20 and a CPU-only PyTorch installation; it does not require a GPU or any third-party source data. The synthetic example contains eight three-member sets. Full benchmark reconstruction and five-fold model evaluation process geospatial source products and much larger intermediate arrays; they require sufficient local storage for independently acquired inputs and generated outputs, plus memory appropriate to those products. No minimum RAM, disk capacity, GPU model, or full-rerun duration has been established for this public package, so those figures are not asserted here. Check available resources and the input inventory before starting a full run.
+
 ## Quick start
 
 No Hiroshima or Kyushu source data are needed for the redistribution-safe checks:

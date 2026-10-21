@@ -2,6 +2,8 @@
 
 ## Choose a validation level
 
+Run commands from the repository root in the environment described in `README.md`. `examples/minimal_msrr_example.py` accepts no command-line options. It reads `data/example/synthetic_msrr_demo.npz`, calls the canonical 120B transform, and prints the input/output shapes and MSRR, StrictPair, and Edge checks; success ends with `STATUS: PASS` and exit code 0. It does not write a scientific result file.
+
 ### Redistribution-safe validation
 
 Use this level to inspect the code package without third-party data:
@@ -14,9 +16,13 @@ python scripts/15_verify_reference_results.py
 python -m pytest -q -p no:cacheprovider
 ```
 
+`00_check_environment.py` prints the Python version and import status for the pinned dependencies. `01_verify_inputs.py` checks public metadata and lists missing non-redistributed inputs; its `--full` option changes missing full-rerun inputs into a nonzero exit. `15_verify_reference_results.py` checks the frozen reference tables, arrays, and `FILE_MANIFEST.csv` hashes and prints the number of checked files. The test suite checks representation dimensions, matching and fold integrity, metrics, and reference outputs. These checks read the packaged inputs and references; they do not train models.
+
 ### Full scientific rerun
 
 Use this level only after acquiring and validating the excluded inputs. Run `python scripts/01_verify_inputs.py --full` before a scientific workflow. The recommended order is recorded in `docs/REPRODUCIBILITY.md` and `QUICKSTART.md`.
+
+The required Hiroshima and Kyushu input filenames are listed by `scripts/01_verify_inputs.py --full`; the source-product paths and versions are in `docs/DATA_SOURCES.md` and `docs/DATA_LAYOUT.md`. The matching scripts read event evidence, eligible candidates, feature tables, and frozen rules in `configs/matching/`; the principal 120B evaluation reads the reconstructed matched tensors and frozen folds. The corresponding outputs are benchmark memberships, fold records, integrity audits, score arrays, metric tables, and paired-bootstrap summaries. `RESULT_MANIFEST.csv` maps each workflow to its frozen reference output. Full workflows have script-specific input gates; where a script exposes command-line options, inspect its argument parser before execution. A missing or version-mismatched input must stop the workflow and be investigated.
 
 ## Interpret the task correctly
 
