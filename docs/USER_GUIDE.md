@@ -20,7 +20,17 @@ python -m pytest -q -p no:cacheprovider
 
 ### Full scientific rerun
 
-This level is **not currently ready for a public-package rerun**. Before any authorized scientific workflow, resolve the excluded real inputs and downstream row-level hand-offs in `FINAL_REPRODUCIBILITY_GATE.md`. The local candidate has restored the original loader, 126A audit authority, benchmark-replay source modules and 120B output hand-off; those restorations do not supply the missing study data. `python scripts/01_verify_inputs.py --full` is only a preliminary seven-file screen. The intended order is recorded in `docs/REPRODUCIBILITY.md` and `QUICKSTART.md`.
+The eleven frozen derived study files and historical prediction hand-offs are publicly available through the Zenodo dataset:
+
+https://zenodo.org/doi/10.5281/zenodo.23533084
+
+Users should extract the archive at the repository root and verify the provided SHA-256 checksums before attempting scientific workflows.
+
+A complete end-to-end scientific rerun has not been independently demonstrated during release preparation.
+
+Some workflows still require separately acquired source products or additional upstream intermediates.
+
+The `--full` input checker covers seven model-ready paths and does not certify all workflow-specific prerequisites. The intended order is recorded in `docs/REPRODUCIBILITY.md` and `QUICKSTART.md`.
 
 The required Hiroshima and Kyushu input filenames are listed by `scripts/01_verify_inputs.py --full`; the source-product paths and versions are in `docs/DATA_SOURCES.md` and `docs/DATA_LAYOUT.md`. The matching scripts read event evidence, eligible candidates, feature tables, and frozen rules in `configs/matching/`; the principal 120B evaluation reads the reconstructed matched tensors and frozen folds. The corresponding outputs are benchmark memberships, fold records, integrity audits, score arrays, metric tables, and paired-bootstrap summaries. `RESULT_MANIFEST.csv` maps each workflow to its frozen reference output. Full workflows have script-specific input gates; where a script exposes command-line options, inspect its argument parser before execution. A missing or version-mismatched input must stop the workflow and be investigated.
 
